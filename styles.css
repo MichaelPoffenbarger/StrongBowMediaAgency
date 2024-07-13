@@ -8,19 +8,20 @@ body {
 #img1 {
     position: absolute;
     z-index: 2;
-    height: 4%;
-    width: 4%;
-    bottom: 5%;
-    left: 5%;
+    height: 3%;
+    width: 3%;
+    bottom: 3%;
+    left: 95%;
+    overflow: hidden;
 }
 
 #img2 {
     position: absolute;
     z-index: 1;
-    top: 83%;
-    left: 110%;
-    height: 3vh;
-    width: 3vw;
+    top:75%;
+    left: 6%;
+    height: 7vh;
+    width: 7vw;
     overflow: hidden;
 }
 
@@ -28,10 +29,11 @@ body {
     position: absolute;
     z-index: 1;
     height: 95%;
-    width: 95%;
+    width: 97.5%;
     top: 2.5%;
-    left: 2.5%;
-    border: 1px solid #fff;
+    left: 1%;
+    overflow: hidden;
+    
 }
 
 h5 {
@@ -58,16 +60,65 @@ h5 {
 
 .card2 {
     position: absolute;
-    z-index: 4;
+    z-index: 1;
     height: 75%;
-    width: 65%;
+    width: 75%;
     color: #fff;
     
-    top: 10%;
-    left: 25%;
+    top: 55%;
+    left: 43%;
 
 
 }
+
+.card3 {
+    position: absolute;
+    z-index: 4;
+    height: 75%;
+    width: 75%;
+    color: #fff;
+    
+    top: 0%;
+    left: 35%;
+
+
+}
+
+.button1 {
+    position: absolute;
+    z-index: 4;
+    height: 10%;
+    width: 15%;
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 1.5em;
+    bottom: 25%; /* Adjust the value here */
+    left: 60%; /* Adjust the value here */
+    border: none; /* Add this line to remove the border */
+}
+
+button {
+    position: absolute;
+    display: block;
+    flex-direction: row;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 1.5em;
+    bottom: 0%; /* Adjust the value here */
+    left: 0%; /* Adjust the value here */
+    border: none; /* Add this line to remove the border */
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #6adcf0;
+}
+
+button:hover {
+    background-color: #6adcf0;
+    color:rgba(0, 0, 0, 1);
+    cursor: pointer;
+}
+
 
 #span2 {
     font-family: 'Work Sans', sans-serif;
@@ -75,7 +126,7 @@ h5 {
     position: absolute;
     color: #fff;
     top: 90%;
-    left: 45%;
+    left: 25%;
 
 }
 
@@ -88,24 +139,35 @@ h5 {
     overflow: hidden;
     position: relative;
     background: none;
+    
 }
 
 .banner .slider{
     position: absolute;
-    width: 125px;
-    height: 175px;
+    width: 10px;
+    height: 20px;
     margin-top: 10%;
     left: calc(50% - 100px);
     transform-style: preserve-3d;
     transform: perspective(1000px);
-    animation: autoRun 800s linear infinite;
+    animation: autoRun 350s linear infinite;
+   
+}
+
+.banner .slider .item .img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1);
+    opacity: 1;
+    animation: spin 30s linear infinite;
 }
 
 @keyframes autoRun{
     from{
-        transform: perspective(1000px) rotateX(-14deg) rotateY(0deg);
+        transform: perspective(1000px) rotateY(-14deg) rotateX(0deg);
     }to{
-        transform: perspective(1000px) rotateX(-14deg) rotateY(360deg);
+        transform: perspective(1000px) rotateY(-14deg) rotateX(360deg);
     }
 }
 
@@ -113,101 +175,111 @@ h5 {
     position: absolute;
     inset: 0 0 0 0;
     transform: 
-      rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) *1deg))
-      translateZ(550px);
+    rotateX(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+    translateZ(80px);
 }
 
-.banner .slider .item img{
-    width: 100%;
-    height: 100%;
+
+
+
+
+@keyframes spin{
+    from{
+        transform: rotateX(0deg);
+    }to{
+        transform: rotateX(180deg);
+    }
+}
+
+.banner .slider .item .img:hover{
+    width: 150%;
+    height: 150%;
     object-fit: cover;
-}
-
-.banner .content{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(1400px, 100vw);
-    height: max-content;
-    padding-bottom: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.banner .content h1{
-    font-size: 16em;
-    font-family: 'ICA Rubrik';
-    color: #1d212c;
-    line-height: 1em;
-    margin: 0;
-}
-
-.banner .content .author{
-    font-size: 1.5em;
-    font-family: 'Poppins';
-    color: #1d212c;
-    margin: 0;
-    text-align: right;
-    max-width: 200px;
-}
-
-.banner .content h2{
-    font-size: 3em;
-}
-
-.model{
-    background-image: url(img/model\ -\ Copy.png);
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    bottom: 0;
-    left: 10%;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: top center;
-}
-
-
-
-.buttonDiv {
-    position: absolute;
-    z-index: 4;
-    height: 50px;
-    width: 250px;
-    top: 70%;
-    left: 50%;
+    transform:  translateY(-25px);
+    filter:brightness(1); 
+    opacity: 1;
     
 }
 
-#button1 {
-    position: absolute;
-    z-index: 4;
-    height: 50px;
-    width: 60px;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1.5em;
-    left: 5%;
-    border: 1px solid #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+.banner .slider .item .img:hover ~ .img{
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    transform:  translateY(-25px);
+    filter: brightness(1); 
+    opacity: 1;
 }
 
-#button2 {
-    position: absolute;
-    z-index: 4;
-    height: 50px;
-    width: 70px;
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1.5em;
-    left: 75%;
-    border: 1px solid #fff;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
+.banner1 {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background: none;
+    
 }
+
+.banner1 .slider1{
+    position: absolute;
+    width: 75px;
+    height: 125px;
+    margin-top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun1 550s linear infinite;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes autoRun1{
+    from{
+        transform: perspective(1000px) rotateX(-14deg) rotateY(360deg);
+    }to{
+        transform: perspective(1000px) rotateX(-14deg) rotateY(0deg);
+    }
+}
+
+.banner1 .slider1 .item1{
+    
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+      
+      rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) *1deg))
+      translateZ(350px);
+}
+
+
+
+.banner1 .slider1 .item1 .img1{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(1);
+    opacity: 1;
+}
+
+.banner1 .slider1 .item1 .img1:hover{
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    transform:  translateX(-25px);
+    filter:brightness(1); 
+    opacity: 1;
+    
+}
+
+.banner1 .slider1 .item1 .img1:hover ~ .img1{
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    transform:  translateX(-25px);
+    filter: brightness(1); 
+    opacity: 1;
+}
+
+
 
 #span1 {
     font-family: 'Work Sans', sans-serif;
@@ -219,17 +291,18 @@ h5 {
 }
 
 #span01 {
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Black Ops One', sans-serif;
     font-size: 3em;
     position: absolute;
     color: #6adcf0;
-    top: 30%;
+    top: 5%;
     left: 5%;
+    text-shadow: #6adcf0 0 0 40px;
 }
 
 #span001 {
     font-family: 'Work Sans', sans-serif;
-    font-size: 2.5em;
+    font-size: 1.5em;
     position: absolute;
     color: #fff;
     top: 50%;
@@ -237,13 +310,20 @@ h5 {
 }
 
 #span0001 {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 3em;
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 6em;
     position: absolute;
     color: #6adcf0;
-    top: 80%;
+    top: 130%;
     left: 5%;
+    text-shadow: #6adcf0 0 0 40px;
 }
+
+
+
+
+
+
 
 canvas {
     border: 1px solid #000;
