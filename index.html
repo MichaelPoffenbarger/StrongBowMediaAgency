@@ -1,75 +1,175 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Canvas</title>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-  </head>
-  <body>
-    <div class="mainDIv">
-      <img id="img1" src="img/whitesignature - Copy.png">
-
-      <div class="button1"><button id="button1">Contact Me</button></div>
-      
-      <div class="cardDiv">
-        
-        
-        <div class="card1">
-          <span id="span1"></span><span id="span01">Michael Poffenbarger</span><span id="span001">Web Designer & Developer</span><span id="span0001">STRONGBOW MEDIA</span>
-          
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <title>StrongBow Media</title>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <ul>
+                <li>home</li>
+                <li>about</li>
+                <li>services</li>
+                <li>contact</li>
+            </ul>
         </div>
-        <div class="card2">
-          
-          <div class="banner" style="--quantity: 10">
-            <div class="slider">
-              
+        <hero>
+            
+            <img src="img/strongbow30.png" id="heroImg">
+            
+        </hero>
+    </header>
+    <section class="section" id="aboutSection">
+        
+        <div id="aboutDiv">
+        
+        <p><span id="aboutSpan">About</span><br><br>StrongBow Media is a web development agency owned and operated by a single individual passionate about creating unique and engaging online experiences. With a focus on delivering high-quality solutions, StrongBow Media strives to build long-lasting relationships with it's clients and help them achieve their digital goals.</p>
+        <img src="img/modelme.png" id="heroModel">
+        </div>
+        
+    </section>
+    <section class="section" id="serviceSection">
+        <span id="serviceSpan">Services</span>
+        <div class="list">
+            <table class="tableList">
+                <tr>
+                    <td class="item" id="item1">Service</td>
+                    <td class="item" id="item2">Description</td>
+                    
+                </tr>
+                <tr>
+                    <td class="item" id="item1">Custom Web Development</td>
+                    <td class="item" id="item2">Building tailored websites and web applications from scratch, ensuring they meet specific client needs and business goals.</td>
+                </tr>
+                <tr>
+                    <td class="item" id="item1">E-Commerce Development</td>
+                    <td class="item" id="item2">Creating secure and scalable online stores, integrating payment gateways, product catalogs, and inventory management systems.</td>
+                </tr>
+                <tr>
+                    <td class="item" id="item1">Search Engine Optimization (SEO)</td>
+                    <td class="item" id="item2">Enhancing website structure, content, and performance to improve visibility on search engines, driving organic traffic and increasing online visibility.</td>
+                </tr>
+                <tr>
+                    <td class="item" id="item1">API Development and Integration </td>
+                    <td class="item" id="item2">Designing and integrating APIs to connect websites with third-party services, ensuring smooth data flow and extended functionality.</td>
+                </tr>
+                <tr>
+                    <td class="item" id="item1">Website Maintenance & Support</td>
+                    <td class="item" id="item2">Providing ongoing maintenance, updates, and security checks to keep websites running smoothly and securely.</td>
+                </tr>
+            </table>
+        </div>
+       
+        <div>
+            <span style="padding-left: 3rem;" id="pricingSpan">Pricing</span>
+            <div>
                 
-                <div class="item" id="pic1" style="--position: 1"><img class="img" src="img/gold - Copy.jpg"></div>
-                <div class="item" id="pic2" style="--position: 2"><img class="img" src="img/gold - Copy.jpg"></div>
-                <div class="item" id="pic3" style="--position: 3"><img class="img" src="img/gold - Copy.jpg"></div>
-                <div class="item" id="pic4" style="--position: 4"><img class="img" src="img/gold - Copy.jpg"></div>
-                <div class="item" id="pic5" style="--position: 5"><img class="img" src="img/gold - Copy.jpg"></div>
-                <div class="item" id="pic6" style="--position: 6"><img class="img" src="img/gold - Copy.jpg"></div>
-                <div class="item" id="pic7" style="--position: 7"><img class="img" src="img/gold - Copy.jpg"></div>
-                <div class="item" id="pic8" style="--position: 8"><img class="img" src="img/gold - Copy.jpg"></div>
-                <div class="item" id="pic9" style="--position: 9"><img class="img" src="img/gold - Copy.jpg"></div>
-                <div class="item" id="pic10" style="--position: 10"><img class="img" src="img/gold - Copy.jpg"></div>
+                <table style="width:80vw; text-align: left; margin-left: 10.5rem;">
+                    <tr>
+                        <th>Package</th>
+                        <th>Price</th>
+                        <th>What you get</th>
+                        <th>Delivery Time</th>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 1.6rem">Basic</td>
+                        <td style="font-size: 2rem">$1000</td>
+                        <td>40 Development Hours<br>Single Page Landing Page or App (Perfect for portfolio's, blog's and small businesses)<br>Search Engine Optimization (SEO)</td>
+                        <td>5 Days</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 1.6rem">Standard</td>
+                        <td style="font-size: 2rem">$1750</td>
+                        <td>60 Development Hours<br>Up to 3 Page Web App or Landing Page (Great for small online store or small business)<br>Search Engine Optimization (SEO)<br>Branding/Logo Design</td>
+                        <td>10 Days</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 1.6rem">Premium</td>
+                        <td style="font-size: 2rem">$2100</td>
+                        <td>80 Development Hours<br>Up to 10 pages (Best for medium sized online stores)<br>Search Engine Optimization (SEO)<br>Branding/Logo Design<br>Post Launch Analytics and Assessments</td>
+                        <td>21 Days</td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: 1.6rem">Month-2-Month</td>
+                        <td style="font-size: 2rem">$1400</td>
+                        <td>Keep me on a month-2-month retainer<br>Unlimited Edits/Revisions (Perfect for businesses requiring dynamic solutions)<br>Guaranteed 60 Development Hours per month<br>Ongoing Search Engine Optimization (SEO)<br>Link Building</td>
+                        <td>60 Hours</td>
+                    </tr>
+                    
+                </table>
+                <p style="font-size: 1rem; padding-left: 3rem;">*these prices are non inclusive of media licensing fees</p>
+                <p style="font-size: 1rem; padding-left: 3rem;">*prices for site upgrades and improvements are pro-rated at the basic package rate of $1000/40 hours</p>
+                <p style="font-size: 1rem; padding-left: 3rem;">*customer must have domain name purchased</p>
             </div>
-            
-            <span id="span2"></span>
         </div>
-        
-    </div>
-    <div class="card3">
-          
-      <div class="banner1" style="--quantity: 10">
-        <div class="slider1">
-          
-            
-            <div class="item1" id="pic1" style="--position: 1"><img class="img1" id="image1" src="img/wizard - Copy.jpg"></div>
-            <div class="item1" id="pic2" style="--position: 2"><img class="img1" id="image2" src="img/Morgoth - Copy.jpg"></div>
-            <div class="item1" id="pic3" style="--position: 3"><img class="img1" id="image3" src="img/Morgoth VS Ungoliant, Phase Runner - Copy.jpg"></div>
-            <div class="item1" id="pic4" style="--position: 4"><img class="img1" id="image4" src="img/v - Copy.jpg"></div>
-            <div class="item1" id="pic5" style="--position: 5"><img class="img1" id="image5" src="img/portaltraverse - Copy.jpg"></div>
-            <div class="item1" id="pic6" style="--position: 6"><img class="img1" id="image6" src="img/wizard - Copy.jpg"></div>
-            <div class="item1" id="pic7" style="--position: 7"><img class="img1" id="image7" src="img/Morgoth - Copy.jpg"></div>
-            <div class="item1" id="pic8" style="--position: 8"><img class="img1" id="image8" src="img/Morgoth VS Ungoliant, Phase Runner - Copy.jpg"></div>
-            <div class="item1" id="pic9" style="--position: 9"><img class="img1" id="image9" src="img/v - Copy.jpg"></div>
-            <div class="item1" id="pic10" style="--position: 10"><img class="img1" id="image10" src="img/portaltraverse - Copy.jpg"></div>
+    </section>
+    <section class="section" id="contactSection">
+        <div class="contact-form" style="margin-left: 10rem;">
+            <h2>Contact</h2>
+            <form action="/submit_form" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
         </div>
-        
-        <span id="span2"></span>
-    </div>
-    
-    </div>
-    
-  </div>
-    <canvas id="canvas1"></canvas>
+        <div style="width: 80vw; margin: auto; padding: 2rem; text-align: center;"><p style="font-size: 2rem; color: #fff; font-weight: 200; width: 60%;">Ready to discuss your project or have questions about our services? Reach out using the form, and we’ll get back to you promptly. Whether you need a new website, development services, or support, we're here to assist you. Let’s get started.</p></div>
+    </section>
+    <section>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-content">
+                    <div class="footer-section" style="width: 60vw; padding-left: 9%; display: flex; flex-direction: column;">
+                        <h3 style="color: white; font-family: 'oswald'; font-size: 1.6rem; font-weight: 200;">Quick Links</h3>
+                        <ul>
+                            <li><a href="#home" style="color: white;">Home</a></li>
+                            <li><a href="#services" style="color: white;">Services</a></li>
+                            <li><a href="#portfolio" style="color: white;">Portfolio</a></li>
+                            <li><a href="#contactSection" style="color: white;">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section" style="width: 60vw; padding-left: 9%; display: flex; flex-direction: column;">
+                        <h3  style="color: white; font-family: 'oswald'; font-size: 1.6rem; font-weight: 200;">Follow Us</h3>
+                        <ul>
+                            <li><a href="https://www.facebook.com/strongbowmedia"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://www.twitter.com/strongbowmedia"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/strongbowmedia"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.linkedin.com/company/strongbowmedia"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section" style="width: 60vw; padding-left: 9%; display: flex; flex-direction: column;">
+                        <h3  style="color: white; font-family: 'oswald'; font-size: 1.6rem; font-weight: 200;">Contact Info</h3>
+                        <p style="color: white; font-family: 'oswald'; font-size: 1.6rem; font-weight: 200;">Address: 123 Main St, Anytown, USA</p>
+                        <p style="color: white; font-family: 'oswald'; font-size: 1.6rem; font-weight: 200;">Phone: +1 (555) 555-5555</p>
+                        <p style="color: white; font-family: 'oswald'; font-size: 1.6rem; font-weight: 200;">Email: <a href="mailto:info@strongbowmedia.com">info@strongbowmedia.com</a></p>
+                    </div>
+                </div>
+                <div class="footer-copyright">
+                    <p style="color: white; font-family: 'oswald'; font-size: 1.6rem; font-weight: 200;">&copy; 2023 Strongbow Media. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </section>
     <script src="script.js"></script>
-  </body>
-  </html>
+</body>
+</html>
