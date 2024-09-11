@@ -1,337 +1,723 @@
 body {
-    margin: 0;
-    padding: 0;
-    
+    background-color: black;
+}
+header {
+/* Your styles here */
+    width: 100vw;
 }
 
-
-#img1 {
-    position: absolute;
-    z-index: 2;
-    height: 3%;
-    width: 3%;
-    bottom: 3%;
-    left: 95%;
-    overflow: hidden;
-}
-
-#img2 {
-    position: absolute;
-    z-index: 1;
-    top:75%;
-    left: 6%;
-    height: 7vh;
-    width: 7vw;
-    overflow: hidden;
-}
-
-.cardDiv {
-    position: absolute;
-    z-index: 1;
-    height: 95%;
-    width: 97.5%;
-    top: 2.5%;
-    left: 1%;
-    overflow: hidden;
-    
-}
-
-h5 {
-    font-family: "Work Sans", sans-serif;
-    position: absolute;
-    color: #6adcf0;
-    
-    left: 5%;
-    z-index: 4;
-    font-size: 1.5em;
-}
-
-.card1 {
-    position: absolute;
-    z-index: 4;
-    height: 400px;
-    width: 250px;
-    color: #fff;
-    
-    top: 10%;
-    left: 5%;
-
-}
-
-.card2 {
-    position: absolute;
-    z-index: 1;
-    height: 75%;
-    width: 75%;
-    color: #fff;
-    
-    top: 55%;
-    left: 43%;
-
-
-}
-
-.card3 {
-    position: absolute;
-    z-index: 4;
-    height: 75%;
-    width: 75%;
-    color: #fff;
-    
-    top: 0%;
-    left: 35%;
-
-
-}
-
-.button1 {
-    position: absolute;
-    z-index: 4;
-    height: 10%;
-    width: 15%;
-    font-family: 'Black Ops One', sans-serif;
-    font-size: 1.5em;
-    bottom: 25%; /* Adjust the value here */
-    left: 60%; /* Adjust the value here */
-    border: none; /* Add this line to remove the border */
-}
-
-button {
-    position: absolute;
-    display: block;
+.nav {
+    width:55%;
+    display: flex;
     flex-direction: row;
-    z-index: 4;
-    height: 100%;
-    width: 100%;
-    font-family: 'Black Ops One', sans-serif;
-    font-size: 1.5em;
-    bottom: 0%; /* Adjust the value here */
-    left: 0%; /* Adjust the value here */
-    border: none; /* Add this line to remove the border */
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.1);
-    color: #6adcf0;
-}
-
-button:hover {
-    background-color: #6adcf0;
-    color:rgba(0, 0, 0, 1);
-    cursor: pointer;
-}
-
-
-#span2 {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 2.5em;
+    justify-content: space-between;
     position: absolute;
-    color: #fff;
-    top: 90%;
-    left: 25%;
-
-}
-
-
-
-.banner {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    background: none;
     
 }
 
-.banner .slider{
-    position: absolute;
-    width: 10px;
-    height: 20px;
-    margin-top: 10%;
-    left: calc(50% - 100px);
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    animation: autoRun 350s linear infinite;
+ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; /* This line removes the dots from the list */
+}
+
+li {
+    color: white;
+    font-family: 'Oswald';
+    
+}
+
+hero {
+/* Your styles here */  
+    width: 100vw;
+}
+
+#heroP {
+    color: white;
+    font-family: 'Oswald';
+    font-size: 1.2rem;
+}
+
+hero img {
+/* Your styles here */
+    width: auto; 
+/* Change from 100vw to auto */
+}
+#heroImg {
+/* Your styles here */
+    width: 100vw;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+} 
+
+.section {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+#aboutDiv {
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+span {
+    font-family: 'Oswald';
+    font-size: 3rem;
+    
+}
+
+p {
+    color: white;
+    font-family: 'oswald';
+    font-size: 0.8rem;
+    width: 45vw;
+    
+}
+#heroModel {
+    width: 30vw;
+    padding-right: 5%;
+}
+
+
+@media  (max-width: 600px) {
+    /* For mobile phones: */
+    body {
+        background-color: black;
+    }
+    header {
+    /* Your styles here */
+        width: 100vw;
+    }
+
+    .nav {
+        width:55%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        top: 0;
+    }
+    
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none; /* This line removes the dots from the list */
+    }
+    
+    li {
+        color: white;
+        font-family: 'oswald';
+        font-size: .6rem;
+    }
+    hero {
+    /* Your styles here */  
+        width: 100vw;
+    }
+
+    
+    hero img {
+    /* Your styles here */
+        width: auto; 
+    /* Change from 100vw to auto */
+    }
+    #heroImg {
+    /* Your styles here */
+        width: 100vw;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }   
+    
+    .section {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    #aboutDiv {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    span {
+        font-family: 'Oswald';
+        font-size: 3rem;
+        
+    }
+    
+    p {
+        color: white;
+        font-family: 'oswald';
+        font-size: 0.8rem;
+        width: 45vw;
+        margin-left: 2rem;
+    }
+    #heroModel {
+        width: 30vw;
+        padding-right: 5%;
+        object-fit: cover;
+    }
+
+    
+}
+@media (max-width: 768px) {
+    /* For tablets: */
+    body {
+        background-color: black;
+    }
+    header {
+    /* Your styles here */
+        width: 100vw;
+    }
+
+    .nav {
+        width:55%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        top: 2%;
+    }
+    
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none; /* This line removes the dots from the list */
+    }
+    
+    li {
+        color: white;
+    }
+    hero {
+    /* Your styles here */  
+        width: 100vw;
+    
+    }
+
+    
+    hero img {
+    /* Your styles here */
+        width: auto;
+    
+     /* Change from 100vw to auto */
+    }
+    #heroImg {
+    /* Your styles here */
+        width: 100vw;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+
+    .section {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    #aboutDiv {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    span {
+        font-family: 'Oswald';
+        font-size: 3rem;
+        
+    }
+    
+    p {
+        color: white;
+        font-family: 'oswald';
+        font-size: 0.8rem;
+        width: 45vw;
+        
+    }
+    #heroModel {
+        width: 30vw;
+        padding-right: 5%;
+        object-fit: cover;
+    }
    
 }
-
-.banner .slider .item .img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(1);
-    opacity: 1;
-    animation: spin 30s linear infinite;
-}
-
-@keyframes autoRun{
-    from{
-        transform: perspective(1000px) rotateY(-14deg) rotateX(0deg);
-    }to{
-        transform: perspective(1000px) rotateY(-14deg) rotateX(360deg);
+@media  (min-width: 992px) {
+    /* For desktop: */
+    body {
+        background-color: black;
+        overflow-x: hidden;
     }
-}
-
-.banner .slider .item{
-    position: absolute;
-    inset: 0 0 0 0;
-    transform: 
-    rotateX(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-    translateZ(80px);
-}
-
-
-
-
-
-@keyframes spin{
-    from{
-        transform: rotateX(0deg);
-    }to{
-        transform: rotateX(180deg);
+    header {
+    /* Your styles here */
+    width: 100vw;
+    
     }
-}
 
-.banner .slider .item .img:hover{
-    width: 150%;
-    height: 150%;
-    object-fit: cover;
-    transform:  translateY(-25px);
-    filter:brightness(1); 
-    opacity: 1;
-    
-}
-
-.banner .slider .item .img:hover ~ .img{
-    width: 150%;
-    height: 150%;
-    object-fit: cover;
-    transform:  translateY(-25px);
-    filter: brightness(1); 
-    opacity: 1;
-}
-
-.banner1 {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    background: none;
-    
-}
-
-.banner1 .slider1{
-    position: absolute;
-    width: 75px;
-    height: 125px;
-    margin-top: 10%;
-    left: calc(50% - 100px);
-    transform-style: preserve-3d;
-    transform: perspective(1000px);
-    animation: autoRun1 550s linear infinite;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-@keyframes autoRun1{
-    from{
-        transform: perspective(1000px) rotateX(-14deg) rotateY(360deg);
-    }to{
-        transform: perspective(1000px) rotateX(-14deg) rotateY(0deg);
+    .nav {
+        width:55%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: absolute;
+        top:2%;
     }
-}
-
-.banner1 .slider1 .item1{
     
-    position: absolute;
-    inset: 0 0 0 0;
-    transform: 
-      
-      rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) *1deg))
-      translateZ(350px);
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none; /* This line removes the dots from the list */
+    }
+    
+    li {
+        color: white;
+    }
+    hero {
+    /* Your styles here */  
+         width: 100vw;
+    
+    }
+
+    
+    hero img {
+    /* Your styles here */
+        width: 100%; /* Change to 100% to fit the screen without overflow */
+        height: auto;
+     /* Maintain aspect ratio */
+    }
+    #heroImg {
+    /* Your styles here */
+        width: 100vw;
+        object-fit: cover;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    
+    } 
+
+    .section {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+    #aboutDiv {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    span {
+        font-family: 'Bungee Shade';
+        font-size: 12rem;
+        animation: textAnimation 3s infinite;
+        display: flex;
+        text-align: left;
+    }
+
+    span::first-letter {
+        /* styles for the first letter */
+        font-family: 'Bungee Shade';
+        font-size: 12rem;
+        animation: textScale 3s infinite;
+        display: inline-block;
+    }
+
+    span::last-letter {
+        /* styles for the last letter */
+        font-family: 'Bungee Shade';
+        font-size: 12rem;
+        animation: textScale 3s infinite;
+        display: inline-block;
+    }
+
+    span::nth-letter(2) {
+        /* styles for the second letter */
+        font-family: 'Bungee Shade';
+        font-size: 12rem;
+        animation: textScale 3s infinite;
+        display: inline-block;
+    }
+
+    #aboutSpan {
+      padding-right: 4rem;
+    }
+
+    /* Add more ::nth-letter selectors to target other letters */
+    /* For example: span::nth-letter(3), span::nth-letter(4), etc. */
+
+    @keyframes textScale {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(2);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+    
+
+
+    @keyframes textAnimation {
+        0% {
+            
+            color: rgb(167, 164, 164);
+        }
+        50% {
+            color: rgb(228, 228, 228);
+        }
+        100% {
+            color: rgb(177, 177, 177);
+        }
+    }
+    
+
+    
+    
+    p {
+        color: white;
+        font-family: 'oswald';
+        font-size: 1.6rem;
+        width: 45vw;
+        margin-left: 10rem;
+    }
+    #heroModel {
+        width: 30vw;
+        padding-right: 8rem;
+        object-fit: cover;
+    }
+
+    #serviceSection {
+        width: 100vw;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        
+        flex-wrap: wrap;
+    }
+
+
+    #serviceSpan {
+        margin-left:10rem;
+    }
+
+    .list {
+        width: 80vw;
+        height: 30rem;
+        margin-left: 10rem;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .list ul {
+        display: flex;
+        flex-direction: column;
+        margin-left: 15rem;
+        padding: 5rem auto;
+    }
+
+    .list li {
+        display: flex; 
+        padding: 2rem;
+    }
+    
+
+    /*
+    #card1 {
+        background-image: linear-gradient(rgba(3, 3, 3, 0.8), rgba(101, 102, 102, 0.8));
+        height: 40vh;
+        border: 1px solid white;
+        margin: 1rem;
+        width: 30%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 5%;
+    }
+    
+    #card2 {
+        background-image: linear-gradient(rgba(3, 3, 3, 0.8), rgba(101, 102, 102, 0.8));
+        height: 40vh;
+        border: 1px solid white;
+        margin: 1rem;
+        width: 12%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 5%;
+    }
+    
+    #card3 {
+        background-image: linear-gradient(rgba(3, 3, 3, 0.8), rgba(101, 102, 102, 0.8));
+        height: 40vh;
+        border: 1px solid white;
+        margin: 1rem;
+        width: 12%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 5%;
+    }
+    
+    #card4 {
+        background-image: linear-gradient(rgba(3, 3, 3, 0.8), rgba(101, 102, 102, 0.8));
+        height: 40vh;
+        border: 1px solid white;
+        margin: 1rem;
+        width: 12%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 5%;
+    }
+    
+    #card5 {
+        background-image: linear-gradient(rgba(3, 3, 3, 0.8), rgba(101, 102, 102, 0.8));
+        height: 40vh;
+        border: 1px solid white;
+        margin: 1rem;
+        width: 12%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 5%;
+    }*/
+
+    h2 {
+        color: rgb(255, 255, 255);
+        font-family: 'oswald';
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
+    .cardP {
+        padding-left: 0;
+        margin-left: 0;
+        font-size:1.6rem;
+        color: rgb(255, 255, 255);
+    }
+
+    h4 {
+        color: rgb(255, 255, 255);
+        font-family: 'oswald';
+        font-size: 1.6rem;
+        margin-left: 0;
+    }
+    
+    
+    
+    
+    
+    /*
+    .list .item {
+        transition: 3s;
+        filter: brightness(0.1);
+    }
+    
+    .list .item:hover {
+        filter: brightness(1);
+        transform: translateZ(200px);
+    }
+    
+    .list .item:hover + .item{
+        filter: brightness(0.6);
+        transform: translateZ(100px) rotateY(30deg);
+    }
+    
+    .list .item:hover + * + * {
+        filter: brightness(0.2);
+        transform: translateZ(50px) rotateY(5deg);
+    }
+    
+    .list .item:has(+ *:hover) {
+        filter: brightness(0.6);
+        transform: translateZ(100px) rotateY(-30deg);
+    }
+    
+    .list .item:has(+ * + *:hover) {
+        filter: brightness(0.2);
+        transform: translateZ(50px) rotateY(-5deg);
+    }*/
+
+    #pricingSpan{
+        margin-left: 7rem;
+        
+       
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: 'Oswald', sans-serif;
+        font-size: 1.2rem;
+        color: #fff;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(247, 246, 246, 0.479);
+        margin: 20px 0;
+        overflow: hidden;
+    }
+    
+    th {
+        background-color: #444;
+        padding: 15px 20px;
+        text-align: left;
+        border-bottom: 2px solid #fff;
+        font-weight: 1000;
+        text-decoration: underline;
+    }
+    
+    td {
+        padding: 15px 20px;
+        border-bottom: 1px solid #fff;
+    }
+    
+    tr {
+        transition: background-color 0.3s ease;
+    }
+    
+    tr:hover {
+        background-color: #555;
+    }
+
+    
+    .tableList {
+        
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+    
+    .tableList:hover {
+        transform: translateY(-10px);
+    }
+    
+    .tableList th {
+        background-color: #dddddd;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        padding: 20px;
+        text-decoration: underline;
+        
+    }
+    
+    .tableList td {
+        padding: 20px;
+        
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    
+    .tableList tr {
+        transition: background-color 0.3s ease;
+    }
+    
+    .tableList tr:hover {
+        background-color: #131010;
+    }
+
+#contactSection {
+    background-color: #000000;
+    padding: 5rem 0;
+    width: 100vw;
 }
 
+    .contact-form {
+        width: 50%;
+        margin: auto;
+        padding: 2rem;
+        background: radial-gradient(circle, #868585, #000);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
 
+    .contact-form h2 {
+        color: #fdfdfd;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
 
-.banner1 .slider1 .item1 .img1{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(1);
-    opacity: 1;
-}
+    .form-group {
+        margin-bottom: 1.5rem;
+        margin-right: 1.75rem;
+    }
 
-.banner1 .slider1 .item1 .img1:hover{
-    width: 150%;
-    height: 150%;
-    object-fit: cover;
-    transform:  translateX(-25px);
-    filter:brightness(1); 
-    opacity: 1;
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #f8f8f8;
+        font-family: 'oswald';
+        font-size: 1.6rem;
+    }
+
+    .form-group input, .form-group textarea {
+        width: 100%;
+        padding: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-family: 'oswald';
+        font-size: 1.6rem;
+    }
+
+    .form-group textarea {
+        height: 10rem;
+        font-family: 'oswald';
+        font-size: 1.6rem;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+        padding: 1rem;
+        background-color: #1d9106;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-family: 'oswald';
+        font-size: 1.6rem;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #114205;
+    }
+    
+    
     
 }
 
-.banner1 .slider1 .item1 .img1:hover ~ .img1{
-    width: 150%;
-    height: 150%;
-    object-fit: cover;
-    transform:  translateX(-25px);
-    filter: brightness(1); 
-    opacity: 1;
+.nav ul li:hover {
+  /* add your desired hover effect styles here, for example: */
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+  padding-top: 10%;
 }
 
 
-
-#span1 {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 2.5em;
-    position: absolute;
-    color: #fff;
-    top: 10%;
-    left: 5%;
-}
-
-#span01 {
-    font-family: 'Black Ops One', sans-serif;
-    font-size: 3em;
-    position: absolute;
-    color: #6adcf0;
-    top: 5%;
-    left: 5%;
-    text-shadow: #6adcf0 0 0 40px;
-}
-
-#span001 {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1.5em;
-    position: absolute;
-    color: #fff;
-    top: 50%;
-    left: 5%;
-}
-
-#span0001 {
-    font-family: 'Black Ops One', sans-serif;
-    font-size: 6em;
-    position: absolute;
-    color: #6adcf0;
-    top: 130%;
-    left: 5%;
-    text-shadow: #6adcf0 0 0 40px;
-}
-
-
-
-
-
-
-
-canvas {
-    border: 1px solid #000;
-    background: black;
-    display: block;
-    margin: 0 auto;
-    
-    position: relative;
-    top: 0;
-    left: 0;
-}
