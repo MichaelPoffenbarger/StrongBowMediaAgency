@@ -70,17 +70,11 @@ hero img {
 
 span {
     font-family: 'Oswald';
-    font-size: 3rem;
+    font-size: 2rem;
     
 }
 
-p {
-    color: white;
-    font-family: 'oswald';
-    font-size: 0.8rem;
-    width: 45vw;
-    
-}
+
 #heroModel {
     width: 30vw;
     padding-right: 5%;
@@ -146,7 +140,7 @@ p {
 
 /* Section styles */
 .section {
-    width: 100vw;
+    width: 80vw;
     height: auto;
     display: flex;
     flex-direction: row;
@@ -358,9 +352,9 @@ tr:hover {
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
-    background-color: #fff;
+    background-color: #313131;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
@@ -377,8 +371,8 @@ tr:hover {
 #nameInput {
     position: absolute;
     top: 13rem;
-    left: -6rem;
-    width: 40vw;
+    left: -11rem;
+    width: 84vw;
 }
 #emailLabel {
     position: absolute;
@@ -388,8 +382,8 @@ tr:hover {
 #emailInput {
     position: absolute;
     top: 21rem;
-    left: -6rem;
-    width: 40vw;
+    left: -11rem;
+    width: 84vw;
 }
 #messageLabel {
     position: absolute;
@@ -399,8 +393,8 @@ tr:hover {
 #messageInput {
     position: absolute;
     top: 30rem;
-    left: -6rem;
-    width: 40vw;
+    left: -11rem;
+    width: 84vw;
 }
 #submitBtn {
     position: absolute;
