@@ -1,0 +1,15 @@
+.container-fluid {
+    background-color: black;
+    
+}
+
+#heroModel {
+    display: none;
+}
+
+.display-4 {
+    font-family: 'Oswald';
+    color: white;
+    display: flex;
+    justify-content: center;
+}
