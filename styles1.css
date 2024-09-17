@@ -3,6 +3,10 @@
     
 }
 
+.navbar-brand {
+    font-family: 'oswald';
+}
+
 #heroModel {
     display: none;
 }
@@ -12,4 +16,78 @@
     color: white;
     display: flex;
     justify-content: center;
+}
+
+#aboutP {
+    font-family: 'oswald';
+    color: white;
+    display: flex;
+    margin-top: -1rem;
+}
+
+.list {
+    margin-top: 2rem;
+}
+
+th {
+    color: white;
+}
+td {
+    color: white;
+}
+
+.portfolioImg{
+    width: 25%;
+    margin: 1rem;
+}
+
+label{
+    color: white;
+}
+
+#contactP {
+    color: white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#submitBtn {
+    display: block;
+    margin: auto;
+    background-color: rgb(192, 192, 192);
+    color: black;
+    font-family: 'oswald';
+    border: none;
+}
+
+.text-white{
+    font-family: 'oswald';
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    box-shadow: none;
+    color: white;
+}
+
+input[type="text"], input[type="email"] {
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#messageInput{
+    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    color: white;
 }
