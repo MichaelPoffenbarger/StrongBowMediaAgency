@@ -12,13 +12,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
     <title>StrongBow Media</title>
 </head>
 <body style="background-color: black;">
     <header>
         <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-            <a class="navbar-brand" href="#home">StrongBow Media</a>
+            <a class="navbar-brand" href="#home"><img src="img/strongbowBwhite.png" id="strongBowD"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,16 +41,23 @@
         </nav>
     </div>
         <hero>
-            <div class="container-fluid">
-            <img src="img/strongbow31.png" id="heroImg" class="img-fluid">
-            </div>
+            <canvas id="canvas" style="width: 90vw; padding-left: 2.5rem;"></canvas>
+            
+            
         </hero>
     </header>
     <section class="section" id="aboutSection">
         <div class="container-fluid">
         <div id="aboutDiv" class="text-center">
         
-        <span id="aboutSpan" class="display-4">About</span><br><br><p id="aboutP" class="lead">StrongBow Media is a web development agency owned and operated by a single individual passionate about creating unique and engaging online experiences. With a focus on delivering high-quality solutions, StrongBow Media strives to build long-lasting relationships with it's clients and help them achieve their digital goals.</p>
+        <div class="col-md-6 col-lg-4 mb-5">
+            <span id="aboutSpan" class="display-4 pl-lg-5" style="margin-top: 4rem;">About</span><br><br>
+            <p id="aboutP" class="lead pl-lg-5">StrongBow Media is a web development agency owned and operated by
+                 a single individual passionate about creating unique and engaging online experiences. 
+                 With a focus on delivering high-quality solutions, StrongBow Media strives to build long-lasting 
+                 relationships with its clients and help them achieve their digital goals.
+            </p>
+        </div>
         <img src="img/modelme.png" id="heroModel" class="img-fluid">
         </div>
     </div>
@@ -58,14 +71,14 @@
             <table class="table table-striped table-bordered">
                 <thead>
                     <tr>
-                        <th>Offers</th>
-                        <th>What you get</th>
+                        <th>Service</th>
+                        <th>Receivable</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>Custom Web Development</td>
-                        <td>Building tailored websites and web applications, ensuring they meet specific client needs and business goals.</td>
+                        <td>Custom websites and web applications, that meet specific client needs and business goals.</td>
                     </tr>
                     <tr>
                         <td>E-Commerce Development</td>
@@ -90,11 +103,59 @@
     </section>
     <section class="section" id="portfolioSection">
         <div class="container-fluid">
+            <h2 class="display-4">Portfolio</h2>
             <div class="row">
-                <div class="col-sm" style="background-color:rgb(0, 0, 0);"><img src="img/cgdswide.png" class="portfolioImg"></div>
-                <div class="col-sm" style="background-color:rgb(34, 34, 34);"><img src="img/pachecosscreenshot.png" class="portfolioImg"></div>
-                <div class="col-sm" style="background-color:rgb(0, 0, 0);"><img src="img/seoscreenshot.png" class="portfolioImg"></div>
-                <div class="col-sm" style="background-color:rgb(34, 34, 34);"><img src="img/STRONGBOW MEDIA-B.png" class="portfolioImg"></div>
+                <div class="col-sm" style="background-color:rgb(0, 0, 0);">
+                    <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="img/cgds.png" alt="Avatar" style="object-fit: cover; width: 100%; height: 100%;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1 class="cardH1">Cole's Garage Door Service</h1>
+                        <p class="cardP"><a href="cgds.us">cgds.us</a></p>
+                        <p class="cardP">Landing Page</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm" style="background-color:rgb(0, 0, 0);"><div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="img/seoscreenshot.png" alt="Avatar" style="object-fit: cover; width: 100%; height: 100%;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1 class="cardH1">Search Engine Optimization</h1>
+                        <p class="cardP">SEO</p>
+                        <p class="cardP">Google Analytics</p>
+                      </div>
+                    </div>
+                  </div></div>
+                <div class="col-sm" style="background-color:rgb(0, 0, 0);"><div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="img/pachecoslogo.png" alt="Avatar" style="object-fit: cover; width: 100%; height: 100%;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1 class="cardH1">Pacheco's Cleaning and Landscaping</h1>
+                        <p class="cardP"><a>codepen link</a></p>
+                        <p class="cardP">Landing Page</p>
+                      </div>
+                    </div>
+                  </div></div>
+                <div class="col-sm" style="object-fit: cover; width: 100%; height: 100%;">
+                    <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img src="img/webaccessability.png" alt="Avatar" style="object-fit: cover; width: 100%; height: 100%;">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1 class="cardH1">John Doe</h1>
+                        <p class="cardP">Architect & Engineer</p>
+                        <p class="cardP">We love that guy</p>
+                      </div>
+                    </div>
+                  </div></div>
             </div>
         </div>
     </section>
@@ -160,7 +221,7 @@
         </div>
         </footer>
     </section>
-    <script src="script.js"></script>
+    <script src="jquery.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
