@@ -25,17 +25,16 @@ function drawImage() {
   const aspectRatio = imageWidth / imageHeight;
   let drawWidth, drawHeight;
   
-  // Increase the size by a factor (e.g., 1.5)
-  const sizeFactor = 1.5; // Change this value to adjust size
+  // Adjust the size to fit the canvas while maintaining the aspect ratio
   if (canvasWidth / canvasHeight > aspectRatio) {
-    drawHeight = canvasHeight * sizeFactor;
+    drawHeight = canvasHeight;
     drawWidth = drawHeight * aspectRatio;
   } else {
-    drawWidth = canvasWidth * sizeFactor;
+    drawWidth = canvasWidth;
     drawHeight = drawWidth / aspectRatio;
   }
-  const x = (canvasWidth - drawWidth) / 1.85;
-  const y = (canvasHeight - drawHeight) / 1.7;
+  const x = (canvasWidth - drawWidth) / 2;
+  const y = (canvasHeight - drawHeight) / 2;
   ctx.drawImage(image, x, y, drawWidth, drawHeight); // Draw the image to fit the canvas
 }
 
