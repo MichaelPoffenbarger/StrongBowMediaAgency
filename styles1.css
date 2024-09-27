@@ -1,5 +1,11 @@
 .container-fluid {
-    background-color: black;
+    background:
+    radial-gradient(black 15%, transparent 16%) 0 0,
+    radial-gradient(black 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+    background-color:#1a1919;
+    background-size:16px 16px;
     
 }
 
@@ -59,6 +65,7 @@ td {
     height: 200px;
     margin-bottom: 1rem;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    border-radius: 10%;
   }
   
   /* This container is needed to position the front and back side */
@@ -87,14 +94,21 @@ td {
   
   /* Style the front side (fallback if image is missing) */
   .flip-card-front {
-    background-color: #bbb;
+    background-color: #3a3a3a;
     color: black;
+    border-radius: 10%;
+    border: 1px solid white;
+  }
+
+  .flip-card-front img{
+    border-radius: 10%;
   }
   
   /* Style the back side */
   .flip-card-back {
     background-color: rgb(5, 5, 5);
     color: white;
+    border-radius: 10%;
     transform: rotateY(180deg);
   }
 
