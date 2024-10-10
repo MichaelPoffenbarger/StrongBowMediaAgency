@@ -3,16 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strongbow Media - Your one-stop solution for all your digital needs.">
+    <meta name="keywords" content="Strongbow Media, Login, Web Development">
+    <meta name="author" content="Your Name">
     <title>Login</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
-            background-color: #000;
+            background-color: #051720; /* Updated background color */
             color: #fff;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
         }
         .navbar {
-            background-color: rgba(0, 0, 0, 0.5) !important;
+            background-color: rgba(29, 31, 32, 0.1) !important;
             backdrop-filter: blur(10px);
         }
         .navbar-brand, .nav-link {
@@ -35,7 +39,7 @@
             pointer-events: none;
         }
         .btn-primary {
-            background: linear-gradient(to right, #764fe0, #9133e9);
+            background: linear-gradient(to right, #764fe0, #410ca5); /* Updated button gradient */
             border: none;
             padding: 0.75rem 1.5rem;
             font-size: 1.1rem;
@@ -107,12 +111,12 @@
             color: #ffffff;
         }
         .form-control {
-            background-color: #222;
+            background-color: #222; /* Updated form control background */
             border-color: #444;
             color: #fff;
         }
         .form-control:focus {
-            background-color: #333;
+            background-color: #333; /* Updated focus state */
             border-color: #7928CA;
             color: #fff;
             box-shadow: 0 0 0 0.25rem rgba(121, 40, 202, 0.25);
@@ -120,14 +124,14 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Brand</a>
+            <a class="navbar-brand" href="#"><img src="img/strongbowPlay.png" alt="Brand Logo" class="img-fluid rounded shadow" style="width: 100px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#">Home</a>
                     </li>
@@ -139,23 +143,22 @@
         </div>
     </nav>
 
-    <section id="login" class="bg-dark">
+    <section id="login" class="bg-dark" style="padding: 80px 0;">
         <div class="container">
             <h2 class="text-center section-title">Login</h2>
             <div class="row">
                 <div class="col-md-6 offset-md-3">
-                    <div class="card h-100">
+                    <div class="card h-100" style="background: linear-gradient(145deg, #1a1a1a, #2a2a2a); border: none;">
                         <div class="card-body text-center">
                             <h3 class="card-title">Enter your credentials</h3>
                             <form action="login.php" method="post">
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
                                 </div>
                                 <div class="mb-3">
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Password" required>
                                 </div>
                                 <button type="submit" class="btn btn-primary">Login</button>
-                                <button type="button" class="btn btn-secondary" onclick="googleOAuth()">Login with Google</button>
                             </form>
                         </div>
                     </div>
@@ -164,22 +167,8 @@
         </div>
     </section>
 
-    <script>
-        function googleOAuth() {
-            // Client ID and API key from the Developer Console
-            var clientId = 'YOUR_CLIENT_ID';
-            var apiKey = 'YOUR_API_KEY';
-            var scopes = 'profile email';
-            var authUrl = 'https://accounts.google.com/o/oauth2/auth?' +
-                'client_id=' + clientId +
-                '&response_type=code&' +
-                'redirect_uri=' + window.location.href +
-                '&scope=' + encodeURIComponent(scopes) +
-                '&state=' + encodeURIComponent('login');
-            window.location.href = authUrl;
-        }
-    </script>
+    
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+CkwjNJC9PE0b" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
