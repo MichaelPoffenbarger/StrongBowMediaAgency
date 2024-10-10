@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="description" content="Strongbow Media - Your one-stop solution for all your digital needs.">
-    <meta name="keywords" content="Strongbow Media, Web Design, Web Development, E-commerce Solutions, Mobile App Development, SEO Optimization">
+    <meta name="keywords"
+        content="Strongbow Media, Web Design, Web Development, E-commerce Solutions, Mobile App Development, SEO Optimization">
     <meta name="author" content="Your Name">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +19,7 @@
     <meta name="msapplication-tooltip" content="Strongbow Media - Your one-stop solution for all your digital needs.">
     <meta name="msapplication-starturl" content="/">
     <meta name="msapplication-config" content="/browserconfig.xml">
-    
+
     <meta property="og:title" content="Strongbow Media">
     <meta property="og:description" content="Your one-stop solution for all your digital needs.">
     <meta property="og:image" content="img/strongbowPlay.png">
@@ -31,26 +33,28 @@
     <meta property="og:article:section" content="Section Name">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strongbow Media</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-
         @media (max-width: 768px) {
             .col-sm-12 {
                 flex: 0 0 100%;
                 max-width: 100%;
                 padding: 0 15px;
                 text-align: center;
-                margin-top: -100px; /* Adjusted to move text up closer to the nav bar for small screens */
+                margin-top: -100px;
+                /* Adjusted to move text up closer to the nav bar for small screens */
             }
-            .col-sm-12 img{
+
+            .col-sm-12 img {
                 width: 300px;
                 margin-top: 120px;
             }
@@ -63,19 +67,25 @@
             color: #fff;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
         }
+
         .navbar {
             background-color: rgba(29, 31, 32, 0.1) !important;
             backdrop-filter: blur(10px);
         }
-        .navbar-brand, .nav-link {
+
+        .navbar-brand,
+        .nav-link {
             color: #fff !important;
+            font-family: 'familjen grotesk';
         }
+
         .hero {
             background: none;
             padding: 120px 0;
             overflow: hidden;
             position: relative;
         }
+
         .hero::before {
             content: '';
             position: absolute;
@@ -83,9 +93,10 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 70%);
             pointer-events: none;
         }
+
         .hero h1 {
             font-family: 'Bebas Neue';
             font-size: 4rem;
@@ -95,15 +106,18 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .hero p {
             font-size: 1.25rem;
             margin-bottom: 2rem;
             color: #888;
             font-family: 'Familjen Grotesk';
         }
-        .hero img{
+
+        .hero img {
             background: none;
         }
+
         .btn-primary {
             background: radial-gradient(circle at top left, #764fe0, #410ca5);
             border: none;
@@ -111,18 +125,22 @@
             font-size: 1.1rem;
             font-family: 'Familjen Grotesk';
         }
+
         .btn-primary:hover {
             background: linear-gradient(to right, #764fe0, #410ca5);
         }
+
         section {
             padding: 80px 0;
         }
+
         .section-title {
             margin-bottom: 50px;
             font-weight: bold;
             font-size: 2.5rem;
-            font-family: 'Familjen Grotesk';
+            
         }
+
         .feature-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
@@ -133,85 +151,99 @@
 
         .text-center {
             font-family: 'Familjen Grotesk';
-  --borderWidth: 3px;
-  background: #1D1F20;
-  position: relative;
-  border-radius: var(--borderWidth);
-}
-.text-center:after {
-  content: '';
-  position: absolute;
-  top: calc(-1 * var(--borderWidth));
-  left: calc(-1 * var(--borderWidth));
-  height: calc(100% + var(--borderWidth) * 2);
-  width: calc(100% + var(--borderWidth) * 2);
-  background: linear-gradient(60deg, #000000, #000000, #000000, #a166ab, #000000, #000000, #000000, #000000);
-  border-radius: calc(2 * var(--borderWidth));
-  z-index: -1;
-  animation: animatedgradient 20s ease infinite;
-  background-size: 300% 300%;
-}
+            --borderWidth: 3px;
+            background: #1D1F20;
+            position: relative;
+            border-radius: var(--borderWidth);
+        }
+
+        .text-center:after {
+            content: '';
+            position: absolute;
+            top: calc(-1 * var(--borderWidth));
+            left: calc(-1 * var(--borderWidth));
+            height: calc(100% + var(--borderWidth) * 2);
+            width: calc(100% + var(--borderWidth) * 2);
+            background: linear-gradient(60deg, #000000, #000000, #000000, #a166ab, #000000, #000000, #000000, #000000);
+            border-radius: calc(2 * var(--borderWidth));
+            z-index: -1;
+            animation: animatedgradient 20s ease infinite;
+            background-size: 300% 300%;
+        }
 
 
-@keyframes animatedgradient {
-	0% {
-		background-position: 0% 0%;
-	}
-	50% {
-		background-position: 100% 0%;
-	}
-	100% {
-		background-position: 0% 0%;
-	}
-}
-        
-        
+        @keyframes animatedgradient {
+            0% {
+                background-position: 0% 0%;
+            }
+
+            50% {
+                background-position: 100% 0%;
+            }
+
+            100% {
+                background-position: 0% 0%;
+            }
+        }
+
+
         .card {
             background-color: #111;
             border: 1px solid #333;
             transition: transform 0.3s, box-shadow 0.3s;
         }
+
         .card:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
         }
+
         .card-title {
             color: #fff;
             font-family: 'Familjen Grotesk';
         }
+
         .card-subtitle {
             color: #ffffff;
             font-family: 'Familjen Grotesk';
         }
+
         .list-unstyled {
             color: #ffffff;
             font-family: 'Familjen Grotesk';
         }
+
         .form-control {
             background-color: #222;
             border-color: #444;
             color: #fff;
             font-family: 'Familjen Grotesk';
         }
+
         .form-control:focus {
             background-color: #333;
             border-color: #7928CA;
             color: #fff;
             box-shadow: 0 0 0 0.25rem rgba(121, 40, 202, 0.25);
         }
+
         .hover-effect {
-        transition: color 0.3s ease;
-    }
-    .hover-effect:hover {
-        color: #7928CA !important;
-    }
+            transition: color 0.3s ease;
+        }
+
+        .hover-effect:hover {
+            color: #7928CA !important;
+        }
     </style>
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="img/strongbowPlay.png" alt="Hero Image" class="img-fluid rounded shadow" style="width: 100px;"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#"><img src="img/strongbowPlay.png" alt="Hero Image"
+                    class="img-fluid rounded shadow" style="width: 100px;"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -229,12 +261,12 @@
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://strongbow.media/registration/register.html" class="btn btn-primary">
+                        <a href="https://strongbow.media/registration/register.html" class="btn btn-primary" style="font-family: 'familjen grotesk'; margin-right: 2px;">
                             <i class="fas fa-user-plus me-2"></i>Create Account
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="https://strongbow.media/login/login.html" class="btn btn-primary">
+                        <a href="https://strongbow.media/login/login.html" class="btn btn-primary" style="font-family: 'Familjen Grotesk'; margin-left: 2px;">
                             <i class="fas fa-sign-in-alt me-2"></i>Login
                         </a>
                     </li>
@@ -248,11 +280,13 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 col-md-6 col-sm-12">
                     <h1 style="padding-top: 100px;">Create. Perfect. Deliver.</h1>
-                    <p class="lead">Experience the future of web development with STRONGBOW Media. We build faster, smarter, and with unparalleled precision.</p>
+                    <p class="lead">Experience the future of web development with STRONGBOW Media. We build faster,
+                        smarter, and with unparalleled precision.</p>
                     <button href="#contact" class="btn btn-primary btn-lg">Start Building</button>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12">
-                    <img src="img/strongbowBwhite.png" alt="Hero Image" class="img-fluid rounded" style="width: 100%; background: none;">
+                    <img src="img/strongbowBwhite.png" alt="Hero Image" class="img-fluid rounded"
+                        style="width: 100%; background: none;">
                 </div>
             </div>
         </div>
@@ -260,23 +294,27 @@
 
     <section id="features" class="py-5">
         <div class="container">
-            <h2 class="text-center section-title mb-5">Powerful Features for Modern Web Solutions</h2>
+            <h2 class="text-center section-title mb-5" style="font-family: 'bebas neue';">Powerful Features for Modern Web Solutions</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center" style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                    <div class="feature-box text-center"
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-rocket feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">Lightning Fast Performance</h3>
-                        <p>Experience unparalleled speed with our optimized infrastructure. We utilize cutting-edge technologies like:</p>
+                        <p>Experience unparalleled speed with our optimized infrastructure. We utilize cutting-edge
+                            technologies like:</p>
                         <ul class="list-unstyled mt-3">
                             <li><i class="fas fa-check text-success me-2"></i>Next.js for server-side rendering</li>
-                            <li><i class="fas fa-check text-success me-2"></i>CDN integration for global content delivery</li>
+                            <li><i class="fas fa-check text-success me-2"></i>CDN integration for global content
+                                delivery</li>
                             <li><i class="fas fa-check text-success me-2"></i>Efficient caching strategies</li>
                             <li><i class="fas fa-check text-success me-2"></i>Image and asset optimization</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center" style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                    <div class="feature-box text-center"
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-shield-alt feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">Secure by Default</h3>
                         <p>Rest easy with our enterprise-grade security measures. Our security features include:</p>
@@ -289,7 +327,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center" style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                    <div class="feature-box text-center"
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-code-branch feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">Seamless Integration</h3>
                         <p>Integrate effortlessly with your existing tools and workflows. We support:</p>
@@ -304,10 +343,12 @@
             </div>
             <div class="row mt-5">
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center" style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                    <div class="feature-box text-center"
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-mobile-alt feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">Responsive Design</h3>
-                        <p>Create stunning websites that look great on all devices. Our responsive design approach includes:</p>
+                        <p>Create stunning websites that look great on all devices. Our responsive design approach
+                            includes:</p>
                         <ul class="list-unstyled mt-3">
                             <li><i class="fas fa-tablet-alt text-primary me-2"></i>Mobile-first development</li>
                             <li><i class="fas fa-tablet-alt text-primary me-2"></i>Fluid grid layouts</li>
@@ -317,7 +358,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center" style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                    <div class="feature-box text-center"
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-search feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">SEO Optimization</h3>
                         <p>Boost your online presence with our SEO-friendly development practices:</p>
@@ -325,12 +367,14 @@
                             <li><i class="fas fa-chart-line text-success me-2"></i>Semantic HTML structure</li>
                             <li><i class="fas fa-chart-line text-success me-2"></i>Optimized meta tags</li>
                             <li><i class="fas fa-chart-line text-success me-2"></i>Schema markup integration</li>
-                            <li><i class="fas fa-chart-line text-success me-2"></i>Performance optimization for better rankings</li>
+                            <li><i class="fas fa-chart-line text-success me-2"></i>Performance optimization for better
+                                rankings</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center" style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                    <div class="feature-box text-center"
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-users-cog feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">Easy Content Management</h3>
                         <p>Empower your team with user-friendly content management systems:</p>
@@ -345,23 +389,30 @@
             </div>
         </div>
     </section>
-    
+
     <section id="pricing" class="py-5">
         <div class="container">
-            <h2 class="text-center section-title mb-5">Choose the Perfect Plan for Your Project</h2>
+            <h2 class="text-center section-title mb-5" style="font-family: 'bebas neue';">Choose the Perfect Plan for Your Project</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100" style="background: linear-gradient(145deg, #051720, #1a1a1a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                    <div class="card h-100"
+                        style="background: linear-gradient(145deg, #051720, #1a1a1a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <div class="card-body text-center d-flex flex-column">
                             <h3 class="card-title mb-4">Starter</h3>
                             <h4 class="card-subtitle mb-4">$999<small class="text">/project</small></h4>
                             <ul class="list-unstyled mb-4 flex-grow-1">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>5-page responsive website</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic SEO optimization</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Contact form integration</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Mobile-friendly design</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 rounds of revisions</li>
-                                <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>E-commerce functionality</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>5-page responsive website
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic SEO optimization
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Contact form integration
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Mobile-friendly design
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>2 rounds of revisions
+                                </li>
+                                <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>E-commerce functionality
+                                </li>
                                 <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Custom animations</li>
                             </ul>
                             <a href="#" class="btn btn-outline-primary mt-auto">Get Started</a>
@@ -369,38 +420,53 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100" style="background: linear-gradient(145deg, #3a3a3a, #2a2a2a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37); transform: scale(1.05);">
+                    <div class="card h-100"
+                        style="background: linear-gradient(145deg, #3a3a3a, #2a2a2a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37); transform: scale(1.05);">
                         <div class="card-body text-center d-flex flex-column">
                             <h3 class="card-title mb-4">Professional</h3>
                             <h4 class="card-subtitle mb-4">$2,499<small class="text">/project</small></h4>
                             <ul class="list-unstyled mb-4 flex-grow-1">
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>10-page responsive website</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced SEO optimization</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Contact form with CRM integration</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Mobile-friendly design</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>5 rounds of revisions</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic e-commerce (up to 20 products)</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>10-page responsive
+                                    website</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced SEO optimization
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Contact form with CRM
+                                    integration</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Mobile-friendly design
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>5 rounds of revisions
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic e-commerce (up to
+                                    20 products)</li>
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Custom animations</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Social media integration</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Social media integration
+                                </li>
                             </ul>
                             <a href="#" class="btn btn-primary mt-auto">Choose Professional</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100" style="background: linear-gradient(145deg, #132a68, #2263ad); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                    <div class="card h-100"
+                        style="background: linear-gradient(145deg, #132a68, #2263ad); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <div class="card-body text-center d-flex flex-column">
                             <h3 class="card-title mb-4">Enterprise</h3>
                             <h4 class="card-subtitle mb-4">Custom</h4>
                             <ul class="list-unstyled mb-4 flex-grow-1">
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Unlimited pages</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Comprehensive SEO strategy</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced CRM integration</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Responsive design across all devices</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Comprehensive SEO
+                                    strategy</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced CRM integration
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Responsive design across
+                                    all devices</li>
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Unlimited revisions</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Full e-commerce solution</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Custom features development</li>
-                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>24/7 priority support</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Full e-commerce solution
+                                </li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Custom features
+                                    development</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>24/7 priority support
+                                </li>
                             </ul>
                             <a href="#" class="btn btn-outline-primary mt-auto">Contact Us</a>
                         </div>
@@ -408,7 +474,8 @@
                 </div>
             </div>
             <div class="text-center mt-5">
-                <p class="lead text-muted">Not sure which plan is right for you? Contact us for a personalized quote tailored to your specific needs.</p>
+                <p class="lead text-muted">Not sure which plan is right for you? Contact us for a personalized quote
+                    tailored to your specific needs.</p>
                 <a href="#contact" class="btn btn-lg btn-primary mt-3">Get a Custom Quote</a>
             </div>
         </div>
@@ -416,39 +483,58 @@
 
     <section id="contact" class="py-5" style="background: linear-gradient(135deg, #1a1a1a, #2a2a2a);">
         <div class="container">
-            <h2 class="text-center section-title mb-5" style="color: #fff; font-size: 2.5rem; font-weight: bold;">Let's Create Something Amazing Together</h2>
+            <h2 class="text-center section-title mb-5" style="font-family: 'bebas neue';">Let's
+                Create Something Amazing Together</h2>
             <div class="row g-4">
                 <div class="col-lg-6 mb-4">
-                    <div class="card h-100" style="background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                    <div class="card h-100"
+                        style="background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <div class="card-body p-4">
                             <h3 class="card-title mb-4" style="color: #7928CA;">Send Us a Message</h3>
                             <form id="contact-form">
                                 <div class="mb-3">
                                     <label for="name" class="form-label" style="color: #a0a0a0;">Full Name</label>
                                     <div class="input-group">
-                                        <span class="input-group-text" style="background-color: #3a3a3a; border: none;"><i class="fas fa-user text-primary"></i></span>
-                                        <input type="text" class="form-control" id="name" required style="background-color: #3a3a3a; border: none; color: #fff;" placeholder="John Doe">
+                                        <span class="input-group-text"
+                                            style="background-color: #3a3a3a; border: none;"><i
+                                                class="fas fa-user text-primary"></i></span>
+                                        <input type="text" class="form-control" id="name" required
+                                            style="background-color: #3a3a3a; border: none; color: #fff;"
+                                            placeholder="John Doe">
                                     </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label" style="color: #a0a0a0;">Email Address</label>
                                     <div class="input-group">
-                                        <span class="input-group-text" style="background-color: #3a3a3a; border: none;"><i class="fas fa-envelope text-primary"></i></span>
-                                        <input type="email" class="form-control" id="email" required style="background-color: #3a3a3a; border: none; color: #fff;" placeholder="john@example.com">
+                                        <span class="input-group-text"
+                                            style="background-color: #3a3a3a; border: none;"><i
+                                                class="fas fa-envelope text-primary"></i></span>
+                                        <input type="email" class="form-control" id="email" required
+                                            style="background-color: #3a3a3a; border: none; color: #fff;"
+                                            placeholder="john@example.com">
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="phone" class="form-label" style="color: #a0a0a0;">Phone Number (Optional)</label>
+                                    <label for="phone" class="form-label" style="color: #a0a0a0;">Phone Number
+                                        (Optional)</label>
                                     <div class="input-group">
-                                        <span class="input-group-text" style="background-color: #3a3a3a; border: none;"><i class="fas fa-phone text-primary"></i></span>
-                                        <input type="tel" class="form-control" id="phone" style="background-color: #3a3a3a; border: none; color: #fff;" placeholder="+1 (555) 123-4567">
+                                        <span class="input-group-text"
+                                            style="background-color: #3a3a3a; border: none;"><i
+                                                class="fas fa-phone text-primary"></i></span>
+                                        <input type="tel" class="form-control" id="phone"
+                                            style="background-color: #3a3a3a; border: none; color: #fff;"
+                                            placeholder="+1 (555) 123-4567">
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="project-type" class="form-label" style="color: #a0a0a0;">Project Type</label>
+                                    <label for="project-type" class="form-label" style="color: #a0a0a0;">Project
+                                        Type</label>
                                     <div class="input-group">
-                                        <span class="input-group-text" style="background-color: #3a3a3a; border: none;"><i class="fas fa-project-diagram text-primary"></i></span>
-                                        <select class="form-select" id="project-type" required style="background-color: #3a3a3a; border: none; color: #fff;">
+                                        <span class="input-group-text"
+                                            style="background-color: #3a3a3a; border: none;"><i
+                                                class="fas fa-project-diagram text-primary"></i></span>
+                                        <select class="form-select" id="project-type" required
+                                            style="background-color: #3a3a3a; border: none; color: #fff;">
                                             <option value="" selected disabled>Select project type</option>
                                             <option value="website">Website Design</option>
                                             <option value="ecommerce">E-commerce Development</option>
@@ -459,14 +545,20 @@
                                     </div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="message" class="form-label" style="color: #a0a0a0;">Project Details</label>
-                                    <textarea class="form-control" id="message" rows="4" required style="background-color: #3a3a3a; border: none; color: #fff;" placeholder="Tell us about your project ideas and goals..."></textarea>
+                                    <label for="message" class="form-label" style="color: #a0a0a0;">Project
+                                        Details</label>
+                                    <textarea class="form-control" id="message" rows="4" required
+                                        style="background-color: #3a3a3a; border: none; color: #fff;"
+                                        placeholder="Tell us about your project ideas and goals..."></textarea>
                                 </div>
                                 <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="privacy-policy" required style="background-color: #3a3a3a; border: none;">
-                                    <label class="form-check-label" for="privacy-policy" style="color: #a0a0a0;">I agree to the <a href="#" style="color: #7928CA;">Privacy Policy</a></label>
+                                    <input type="checkbox" class="form-check-input" id="privacy-policy" required
+                                        style="background-color: #3a3a3a; border: none;">
+                                    <label class="form-check-label" for="privacy-policy" style="color: #a0a0a0;">I agree
+                                        to the <a href="#" style="color: #7928CA;">Privacy Policy</a></label>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100" style="background: linear-gradient(to right, #7928CA, #FF0080); border: none; padding: 0.75rem 1.5rem; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                <button type="submit" class="btn btn-primary w-100"
+                                    style="background: linear-gradient(to right, #7928CA, #FF0080); border: none; padding: 0.75rem 1.5rem; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
                                     <i class="fas fa-paper-plane me-2"></i>Send Message
                                 </button>
                             </form>
@@ -474,14 +566,18 @@
                     </div>
                 </div>
                 <div class="col-lg-6 mb-4">
-                    <div class="card h-100" style="background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                    <div class="card h-100"
+                        style="background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <div class="card-body p-4">
                             <h3 class="card-title mb-4" style="color: #7928CA;">Connect With Us</h3>
                             <div class="mb-4">
                                 <h5 class="text-white mb-3">Our Office</h5>
-                                <p class="mb-2" style="color: #a0a0a0;"><i class="fas fa-map-marker-alt me-2 text-primary"></i>Fort Worth, Texas</p>
-                                <p class="mb-2" style="color: #a0a0a0;"><i class="fas fa-phone me-2 text-primary"></i>+1 (607) 972-1834</p>
-                                <p class="mb-2" style="color: #a0a0a0;"><i class="fas fa-envelope me-2 text-primary"></i>contact@strongbowmedia.com</p>
+                                <p class="mb-2" style="color: #a0a0a0;"><i
+                                        class="fas fa-map-marker-alt me-2 text-primary"></i>Fort Worth, Texas</p>
+                                <p class="mb-2" style="color: #a0a0a0;"><i class="fas fa-phone me-2 text-primary"></i>+1
+                                    (607) 972-1834</p>
+                                <p class="mb-2" style="color: #a0a0a0;"><i
+                                        class="fas fa-envelope me-2 text-primary"></i>contact@strongbowmedia.com</p>
                             </div>
                             <div class="mb-4">
                                 <h5 class="text-white mb-3">Business Hours</h5>
@@ -492,16 +588,26 @@
                             <div class="mb-4">
                                 <h5 class="text-white mb-3">Follow Us</h5>
                                 <div class="d-flex gap-3">
-                                    <a href="#" class="btn btn-outline-light" style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="btn btn-outline-light" style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-twitter"></i></a>
-                                    <a href="#" class="btn btn-outline-light" style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" class="btn btn-outline-light" style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i class="fab fa-instagram"></i></a>
+                                    <a href="#" class="btn btn-outline-light"
+                                        style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
+                                            class="fab fa-facebook-f"></i></a>
+                                    <a href="#" class="btn btn-outline-light"
+                                        style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
+                                            class="fab fa-twitter"></i></a>
+                                    <a href="#" class="btn btn-outline-light"
+                                        style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
+                                            class="fab fa-linkedin-in"></i></a>
+                                    <a href="#" class="btn btn-outline-light"
+                                        style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
+                                            class="fab fa-instagram"></i></a>
                                 </div>
                             </div>
                             <div>
                                 <h5 class="text-white mb-3">Our Location</h5>
                                 <div class="ratio ratio-16x9">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5630927089763!2d-122.39901518468204!3d37.78289997975775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807b6fd7d2e9%3A0x5c557f3daeb8f1bf!2s123%20Tech%20St%2C%20San%20Francisco%2C%20CA%2094107!5e0!3m2!1sen!2sus!4v1623344892526!5m2!1sen!2sus" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.5630927089763!2d-122.39901518468204!3d37.78289997975775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085807b6fd7d2e9%3A0x5c557f3daeb8f1bf!2s123%20Tech%20St%2C%20San%20Francisco%2C%20CA%2094107!5e0!3m2!1sen!2sus!4v1623344892526!5m2!1sen!2sus"
+                                        style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                                 </div>
                             </div>
                         </div>
@@ -516,18 +622,24 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
                     <h5 class="mb-4" style="color: #7928CA; font-weight: bold;">Strongbow Media</h5>
-                    <p class="mb-4" style="color: #a0a0a0;">Crafting digital experiences that drive results. We're passionate about creating innovative web solutions that help businesses thrive in the digital world.</p>
+                    <p class="mb-4" style="color: #a0a0a0;">Crafting digital experiences that drive results. We're
+                        passionate about creating innovative web solutions that help businesses thrive in the digital
+                        world.</p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="btn btn-outline-light" style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                        <a href="#" class="btn btn-outline-light"
+                            style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="btn btn-outline-light" style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                        <a href="#" class="btn btn-outline-light"
+                            style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="btn btn-outline-light" style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                        <a href="#" class="btn btn-outline-light"
+                            style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="#" class="btn btn-outline-light" style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                        <a href="#" class="btn btn-outline-light"
+                            style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -535,30 +647,43 @@
                 <div class="col-lg-2 col-md-6">
                     <h5 class="mb-4" style="color: #7928CA; font-weight: bold;">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#home" class="text-light text-decoration-none hover-effect">Home</a></li>
-                        <li class="mb-2"><a href="#features" class="text-light text-decoration-none hover-effect">Features</a></li>
-                        <li class="mb-2"><a href="#pricing" class="text-light text-decoration-none hover-effect">Pricing</a></li>
-                        <li class="mb-2"><a href="#contact" class="text-light text-decoration-none hover-effect">Contact</a></li>
+                        <li class="mb-2"><a href="#home" class="text-light text-decoration-none hover-effect">Home</a>
+                        </li>
+                        <li class="mb-2"><a href="#features"
+                                class="text-light text-decoration-none hover-effect">Features</a></li>
+                        <li class="mb-2"><a href="#pricing"
+                                class="text-light text-decoration-none hover-effect">Pricing</a></li>
+                        <li class="mb-2"><a href="#contact"
+                                class="text-light text-decoration-none hover-effect">Contact</a></li>
                         <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Blog</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4" style="color: #7928CA; font-weight: bold;">Our Services</h5>
                     <ul class="list-unstyled">
-                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Web Design</a></li>
-                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Web Development</a></li>
-                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">E-commerce Solutions</a></li>
-                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Mobile App Development</a></li>
-                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">SEO Optimization</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Web Design</a>
+                        </li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Web
+                                Development</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">E-commerce
+                                Solutions</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">Mobile App
+                                Development</a></li>
+                        <li class="mb-2"><a href="#" class="text-light text-decoration-none hover-effect">SEO
+                                Optimization</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="mb-4" style="color: #7928CA; font-weight: bold;">Newsletter</h5>
-                    <p class="mb-4" style="color: #a0a0a0;">Stay updated with our latest news and offers. Subscribe to our newsletter.</p>
+                    <p class="mb-4" style="color: #a0a0a0;">Stay updated with our latest news and offers. Subscribe to
+                        our newsletter.</p>
                     <form id="newsletter-form">
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="Your email" aria-label="Your email" aria-describedby="button-addon2" style="background-color: #3a3a3a; border: none; color: #fff;">
-                            <button class="btn btn-primary" type="submit" id="button-addon2" style="background: linear-gradient(to right, #7928CA, #FF0080); border: none;">Subscribe</button>
+                            <input type="email" class="form-control" placeholder="Your email" aria-label="Your email"
+                                aria-describedby="button-addon2"
+                                style="background-color: #3a3a3a; border: none; color: #fff;">
+                            <button class="btn btn-primary" type="submit" id="button-addon2"
+                                style="background: linear-gradient(to right, #7928CA, #FF0080); border: none;">Subscribe</button>
                         </div>
                     </form>
                 </div>
@@ -570,11 +695,14 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     <ul class="list-inline mb-0">
-                        <li class="list-inline-item"><a href="#" class="text-light text-decoration-none hover-effect">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#"
+                                class="text-light text-decoration-none hover-effect">Privacy Policy</a></li>
                         <li class="list-inline-item">|</li>
-                        <li class="list-inline-item"><a href="#" class="text-light text-decoration-none hover-effect">Terms of Service</a></li>
+                        <li class="list-inline-item"><a href="#"
+                                class="text-light text-decoration-none hover-effect">Terms of Service</a></li>
                         <li class="list-inline-item">|</li>
-                        <li class="list-inline-item"><a href="#" class="text-light text-decoration-none hover-effect">Sitemap</a></li>
+                        <li class="list-inline-item"><a href="#"
+                                class="text-light text-decoration-none hover-effect">Sitemap</a></li>
                     </ul>
                 </div>
             </div>
@@ -584,24 +712,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             // Smooth scrolling for navbar links
-            $('a.nav-link').on('click', function(event) {
+            $('a.nav-link').on('click', function (event) {
                 if (this.hash !== "") {
                     event.preventDefault();
                     var hash = this.hash;
                     $('html, body').animate({
                         scrollTop: $(hash).offset().top - 70
-                    }, 800, function(){
+                    }, 800, function () {
                         window.location.hash = hash;
                     });
                 }
             });
 
             // Add active class to navbar items on scroll
-            $(window).scroll(function() {
+            $(window).scroll(function () {
                 var scrollDistance = $(window).scrollTop();
-                $('section').each(function(i) {
+                $('section').each(function (i) {
                     if ($(this).position().top <= scrollDistance + 72) {
                         $('.navbar-nav a.active').removeClass('active');
                         $('.navbar-nav a').eq(i).addClass('active');
@@ -611,64 +739,65 @@
 
             // Form submission (you'll need to implement the server-side handling)
             const form = document.getElementById('contact-form');
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you would typically send the form data to your server
-            alert('Thank you for your message. We will get back to you soon!');
-            form.reset();
-        });
-
-        // Add animation to form inputs
-        const formInputs = document.querySelectorAll('#contact-form input, #contact-form textarea, #contact-form select');
-        formInputs.forEach(input => {
-            input.addEventListener('focus', function() {
-                this.parentElement.style.transform = 'translateY(-5px)';
-                this.parentElement.style.transition = 'transform 0.3s ease';
-            });
-            input.addEventListener('blur', function() {
-                this.parentElement.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Add hover effect to social media buttons
-        const socialButtons = document.querySelectorAll('.btn-outline-light');
-        socialButtons.forEach(button => {
-            button.addEventListener('mouseenter', function() {
-                this.style.backgroundColor = '#7928CA';
-                this.style.borderColor = '#7928CA';
-                this.style.transition = 'all 0.3s ease';
-            });
-            button.addEventListener('mouseleave', function() {
-                this.style.backgroundColor = 'transparent';
-                this.style.borderColor = '#fff';
-            });
-        });
-        const newsletterForm = document.getElementById('newsletter-form');
-        newsletterForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Here you would typically send the form data to your server
-            alert('Thank you for subscribing to our newsletter!');
-            newsletterForm.reset();
-        });
-
-        // Smooth scrolling for footer links
-        const footerLinks = document.querySelectorAll('footer a[href^="#"]');
-        footerLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
+            form.addEventListener('submit', function (e) {
                 e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+                // Here you would typically send the form data to your server
+                alert('Thank you for your message. We will get back to you soon!');
+                form.reset();
             });
-        });
 
-        
+            // Add animation to form inputs
+            const formInputs = document.querySelectorAll('#contact-form input, #contact-form textarea, #contact-form select');
+            formInputs.forEach(input => {
+                input.addEventListener('focus', function () {
+                    this.parentElement.style.transform = 'translateY(-5px)';
+                    this.parentElement.style.transition = 'transform 0.3s ease';
+                });
+                input.addEventListener('blur', function () {
+                    this.parentElement.style.transform = 'translateY(0)';
+                });
+            });
+
+            // Add hover effect to social media buttons
+            const socialButtons = document.querySelectorAll('.btn-outline-light');
+            socialButtons.forEach(button => {
+                button.addEventListener('mouseenter', function () {
+                    this.style.backgroundColor = '#7928CA';
+                    this.style.borderColor = '#7928CA';
+                    this.style.transition = 'all 0.3s ease';
+                });
+                button.addEventListener('mouseleave', function () {
+                    this.style.backgroundColor = 'transparent';
+                    this.style.borderColor = '#fff';
+                });
+            });
+            const newsletterForm = document.getElementById('newsletter-form');
+            newsletterForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                // Here you would typically send the form data to your server
+                alert('Thank you for subscribing to our newsletter!');
+                newsletterForm.reset();
+            });
+
+            // Smooth scrolling for footer links
+            const footerLinks = document.querySelectorAll('footer a[href^="#"]');
+            footerLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+
         });
     </script>
 </body>
+
 </html>
