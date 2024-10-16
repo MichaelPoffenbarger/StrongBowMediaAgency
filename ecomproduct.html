@@ -249,8 +249,10 @@
             <h2 class="section-title text-center">The STRONGBOW Media E-Commerce Advantage</h2>
             <div class="content-section">
                 <p class="text-center mb-4">By choosing STRONGBOW Media for your e-commerce development, you're investing in a comprehensive solution that delivers exceptional value:</p>
-                <div id="process-chart"></div>
-                <p class="text-center mt-4 text-muted">Our holistic approach ensures your e-commerce platform not only meets but exceeds industry standards in all key areas.</p>
+                <div id="process-chart">
+                    <img id="process-image" src="" alt="Process Image" />
+                </div>
+                <p class="text-center mt-4">Our holistic approach ensures your e-commerce platform not only meets but exceeds industry standards in all key areas.</p>
             </div>
         </div>
     </section>
@@ -278,70 +280,45 @@
             });
 
             // Process Value Chart
-            var options = {
-                series: [{
-                    name: 'STRONGBOW Media',
-                    data: [95, 92, 98, 96, 94]
-                }],
-                chart: {
-                    height: 350,
-                    type: 'radar',
-                    foreColor: '#a0a0a0'
-                },
-                dataLabels: {
-                    enabled: true
-                },
-                plotOptions: {
-                    radar: {
-                        size: 140,
-                        polygons: {
-                            strokeColors: '#555',
-                            fill: {
-                                colors: ['#1a1a1a', 'transparent']
-                            }
-                        }
-                    }
-                },
-                title: {
-                    text: 'STRONGBOW Media E-Commerce Development Value',
-                    align: 'center',
-                    style: {
-                        color: '#fff'
-                    }
-                },
-                colors: ['#764fe0'],
-                markers: {
-                    size: 4,
-                    colors: ['#fff'],
-                    strokeColor: '#764fe0',
-                    strokeWidth: 2,
-                },
-                tooltip: {
-                    y: {
-                        formatter: function(val) {
-                            return val + '%'
-                        }
-                    }
-                },
-                xaxis: {
-                    categories: ['User Experience', 'Performance', 'Security', 'Scalability', 'CMS Integration']
-                },
-                yaxis: {
-                    tickAmount: 7,
-                    labels: {
-                        formatter: function(val, i) {
-                            if (i % 2 === 0) {
-                                return val + '%'
-                            } else {
-                                return ''
-                            }
-                        }
-                    }
-                }
-            };
+            var images = [
+                'img/strongbowPlay.png',
+                'img/strongbowA.jpg',
+                'img/strongbowPlay.png',
+                'img/strongbowPlay.png',
+                'img/strongbowPlay.png'
+            ];
 
-            var chart = new ApexCharts(document.querySelector("#process-chart"), options);
-            chart.render();
+            var currentImage = 0;
+
+            function changeImage(direction) {
+                var img = document.getElementById('process-image'); // Updated to target the img tag
+                if (direction === 'next') {
+                    currentImage = (currentImage + 1) % images.length;
+                } else if (direction === 'prev') {
+                    currentImage = (currentImage - 1 + images.length) % images.length;
+                }
+                img.src = images[currentImage];
+                img.style.maxWidth = '100%'; // Make the image responsive and fit inside the parent div
+                img.style.height = 'auto'; // Maintain aspect ratio
+            }
+
+            // Add pagination buttons
+            var prevButton = document.createElement('button');
+            prevButton.textContent = 'Previous';
+            prevButton.onclick = function() {
+                changeImage('prev');
+            };
+            document.getElementById('process-chart').appendChild(prevButton);
+
+            var nextButton = document.createElement('button');
+            nextButton.textContent = 'Next';
+            nextButton.onclick = function() {
+                changeImage('next');
+            };
+            document.getElementById('process-chart').appendChild(nextButton);
+
+            // Remove the automatic interval change
+            // setInterval(changeImage, 3000); // Change image every 3 seconds
         });
     </script>
 </body>
