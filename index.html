@@ -177,31 +177,14 @@ box-shadow:  10px 10px 30px #764fe0,
         .text-center:after {
             content: '';
             position: absolute;
-            top: calc(-1 * var(--borderWidth));
-            left: calc(-1 * var(--borderWidth));
-            height: calc(100% + var(--borderWidth) * 2);
-            width: calc(100% + var(--borderWidth) * 2);
-            background: linear-gradient(60deg, #000000, #000000, #000000, #a166ab, #000000, #000000, #000000, #000000);
-            border-radius: calc(2 * var(--borderWidth));
+            
             z-index: -1;
-            animation: animatedgradient 20s ease infinite;
+            
             background-size: 300% 300%;
         }
 
 
-        @keyframes animatedgradient {
-            0% {
-                background-position: 0% 0%;
-            }
-
-            50% {
-                background-position: 100% 0%;
-            }
-
-            100% {
-                background-position: 0% 0%;
-            }
-        }
+        
 
 
         .card {
@@ -316,7 +299,7 @@ box-shadow:  10px 10px 30px #764fe0,
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="feature-box text-center"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c;; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-rocket feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">Lightning Fast Performance</h3>
                         <p>Experience unparalleled speed with our optimized infrastructure. We utilize cutting-edge
@@ -332,7 +315,7 @@ box-shadow:  10px 10px 30px #764fe0,
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="feature-box text-center"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c;; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-shield-alt feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">Secure by Default</h3>
                         <p>Rest easy with our enterprise-grade security measures. Our security features include:</p>
@@ -346,7 +329,7 @@ box-shadow:  10px 10px 30px #764fe0,
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="feature-box text-center"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c;; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-code-branch feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">Seamless Integration</h3>
                         <p>Integrate effortlessly with your existing tools and workflows. We support:</p>
@@ -362,7 +345,7 @@ box-shadow:  10px 10px 30px #764fe0,
             <div class="row mt-5">
                 <div class="col-md-4 mb-4">
                     <div class="feature-box text-center"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c;; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-mobile-alt feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">Responsive Design</h3>
                         <p>Create stunning websites that look great on all devices. Our responsive design approach
@@ -377,7 +360,7 @@ box-shadow:  10px 10px 30px #764fe0,
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="feature-box text-center"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c;; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-search feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">SEO Optimization</h3>
                         <p>Boost your online presence with our SEO-friendly development practices:</p>
@@ -392,7 +375,7 @@ box-shadow:  10px 10px 30px #764fe0,
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="feature-box text-center"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c;; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-users-cog feature-icon mb-4" style="font-size: 3.5rem;"></i>
                         <h3 class="mb-3">Easy Content Management</h3>
                         <p>Empower your team with user-friendly content management systems:</p>
@@ -499,14 +482,14 @@ box-shadow:  10px 10px 30px #764fe0,
         </div>
     </section>
 
-    <section id="contact" class="py-5" style="background: linear-gradient(135deg, #1a1a1a, #2a2a2a);">
+    <section id="contact" class="py-5" style="background: #08202c;">
         <div class="container">
             <h2 class="text-center section-title mb-5" style="font-family: 'bebas neue';">Let's
                 Create Something Amazing Together</h2>
             <div class="row g-4">
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100"
-                        style="background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                        style="background: #08202c; border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <div class="card-body p-4">
                             <h3 class="card-title mb-4" style="color: #7928CA;">Send Us a Message</h3>
                             <form id="contact-form">
@@ -576,7 +559,9 @@ box-shadow:  10px 10px 30px #764fe0,
                                         to the <a href="#" style="color: #7928CA;">Privacy Policy</a></label>
                                 </div>
                                 <button type="submit" class="btn btn-primary w-100"
-                                    style="background: linear-gradient(to right, #7928CA, #FF0080); border: none; padding: 0.75rem 1.5rem; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                                    style="background: #764fe0;
+                                    box-shadow:  10px 10px 30px #764fe094,
+                                                 -10px -10px 30px #420ca5a4; border: none; padding: 0.75rem 1.5rem; font-size: 1.1rem; transition: transform 0.3s ease, box-shadow 0.3s ease;">
                                     <i class="fas fa-paper-plane me-2"></i>Send Message
                                 </button>
                             </form>
@@ -585,7 +570,7 @@ box-shadow:  10px 10px 30px #764fe0,
                 </div>
                 <div class="col-lg-6 mb-4">
                     <div class="card h-100"
-                        style="background: linear-gradient(145deg, #2a2a2a, #1a1a1a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
+                        style="background: #08202c; border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <div class="card-body p-4">
                             <h3 class="card-title mb-4" style="color: #7928CA;">Connect With Us</h3>
                             <div class="mb-4">
@@ -595,7 +580,7 @@ box-shadow:  10px 10px 30px #764fe0,
                                 <p class="mb-2" style="color: #a0a0a0;"><i class="fas fa-phone me-2 text-primary"></i>+1
                                     (607) 972-1834</p>
                                 <p class="mb-2" style="color: #a0a0a0;"><i
-                                        class="fas fa-envelope me-2 text-primary"></i>contact@strongbowmedia.com</p>
+                                        class="fas fa-envelope me-2 text-primary"></i>info@strongbow.media</p>
                             </div>
                             <div class="mb-4">
                                 <h5 class="text-white mb-3">Business Hours</h5>
@@ -603,23 +588,7 @@ box-shadow:  10px 10px 30px #764fe0,
                                 <p class="mb-1" style="color: #a0a0a0;">Saturday: 10:00 AM - 4:00 PM</p>
                                 <p style="color: #a0a0a0;">Sunday: Closed</p>
                             </div>
-                            <div class="mb-4">
-                                <h5 class="text-white mb-3">Follow Us</h5>
-                                <div class="d-flex gap-3">
-                                    <a href="#" class="btn btn-outline-light"
-                                        style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a href="#" class="btn btn-outline-light"
-                                        style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a href="#" class="btn btn-outline-light"
-                                        style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                    <a href="#" class="btn btn-outline-light"
-                                        style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;"><i
-                                            class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
+                            
                             <div>
                                 <h5 class="text-white mb-3">Our Location</h5>
                                 <div class="ratio ratio-16x9">
@@ -635,7 +604,7 @@ box-shadow:  10px 10px 30px #764fe0,
         </div>
     </section>
 
-    <footer class="bg-dark text-light py-5" style="background: linear-gradient(135deg, #1a1a1a, #2a2a2a);">
+    <footer class="text-light py-5" style="background: #08202c;">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6">
@@ -644,11 +613,11 @@ box-shadow:  10px 10px 30px #764fe0,
                         passionate about creating innovative web solutions that help businesses thrive in the digital
                         world.</p>
                     <div class="d-flex gap-3">
-                        <a href="#" class="btn btn-outline-light"
+                        <a href="#https://www.facebook.com/profile.php?id=61566401364445" class="btn btn-outline-light"
                             style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
                             <i class="fab fa-facebook-f"></i>
                         </a>
-                        <a href="#" class="btn btn-outline-light"
+                        <a href="#https://x.com/strongbow_media" class="btn btn-outline-light"
                             style="border-radius: 50%; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
                             <i class="fab fa-twitter"></i>
                         </a>
@@ -700,7 +669,9 @@ box-shadow:  10px 10px 30px #764fe0,
                                 aria-describedby="button-addon2"
                                 style="background-color: #3a3a3a; border: none; color: #fff;">
                             <button class="btn btn-primary" type="submit" id="button-addon2"
-                                style="background: linear-gradient(to right, #7928CA, #FF0080); border: none;">Subscribe</button>
+                                style="background: #764fe0;
+                                box-shadow:  10px 10px 30px #764fe0,
+                                             -10px -10px 30px #410ca5; border: none;">Subscribe</button>
                         </div>
                     </form>
                 </div>
