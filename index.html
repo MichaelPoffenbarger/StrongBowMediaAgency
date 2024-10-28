@@ -38,11 +38,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strongbow Media</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    
     <style>
         @media (max-width: 768px) {
             .col-sm-12 {
@@ -94,6 +100,15 @@
             position: relative;
         }
 
+        #heroCanvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
         .hero::before {
             content: '';
             position: absolute;
@@ -119,7 +134,7 @@
             font-size: 1.25rem;
             margin-bottom: 2rem;
             color: #ffffff;
-            font-family: 'Familjen Grotesk';
+            font-family: 'raleway';
             font-weight: 100;
         }
 
@@ -240,7 +255,7 @@ box-shadow:  10px 10px 30px #764fe0,
              -10px -10px 30px #410ca5;
             padding: 0.75rem 1.5rem;
             font-size: 1.1rem;
-            font-family: 'Familjen Grotesk';
+            font-family: 'raleway';
         }
 
         .btn-primary:hover {
@@ -267,7 +282,7 @@ box-shadow:  10px 10px 30px #764fe0,
         }
 
         .feature-box{
-            font-family: 'Familjen Grotesk';
+            font-family: 'raleway';
             --borderWidth: 3px;
             background: #08202c;
             position: relative;
@@ -308,7 +323,7 @@ box-shadow:  10px 10px 30px #764fe0,
 
         .card-title {
             color: #fff;
-            font-family: 'Familjen Grotesk';
+            font-family: 'bebas neue';
         }
 
         .card-subtitle {
@@ -318,7 +333,7 @@ box-shadow:  10px 10px 30px #764fe0,
 
         .list-unstyled {
             color: #ffffff;
-            font-family: 'Familjen Grotesk';
+            font-family: 'raleway';
         }
 
         .form-control {
@@ -360,7 +375,7 @@ box-shadow:  10px 10px 30px #764fe0,
                         <a class="nav-link" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Features</a>
+                        <a class="nav-link" href="#features">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#pricing">Pricing</a>
@@ -368,22 +383,14 @@ box-shadow:  10px 10px 30px #764fe0,
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a href="https://strongbow.media/registration/register.html" class="btn btn-primary" style="font-family: 'familjen grotesk'; margin-right: 2px;">
-                            <i class="fas fa-user-plus me-2"></i>Create Account
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://strongbow.media/login/login.html" class="btn btn-primary" style="font-family: 'Familjen Grotesk'; margin-left: 2px;">
-                            <i class="fas fa-sign-in-alt me-2"></i>Login
-                        </a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
     </nav>
 
     <section class="hero" id="home">
+        <canvas id="heroCanvas"></canvas>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-6 col-sm-12">
@@ -394,7 +401,7 @@ box-shadow:  10px 10px 30px #764fe0,
                 </div>
                 <div class="col-lg-8 col-md-6 col-sm-12">
                 
-                    <img src="img/stbmwhite2.png" alt="Hero Image" class="img-fluid rounded" style="width: 100%;">
+                    <img src="img/strongbowPlay2.png" alt="Hero Image" class="img-fluid rounded" style="width: 100%;">
                 
                 </div>
             </div>
@@ -403,13 +410,13 @@ box-shadow:  10px 10px 30px #764fe0,
 
     <section id="features" class="py-5">
         <div class="container">
-            <h2 class="text-center section-title mb-5" style="font-family: 'bebas neue';">Powerful Features for Modern Web Solutions</h2>
+            <h2 class="text-center section-title mb-5" style="font-family: 'bebas neue';">Services We Offer</h2>
             <div class="row">
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center"
+                    <div class="feature-box text-left"
                         style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-rocket feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/performance.html" target="_blank" rel="noopener noreferrer">Lightning Fast Performance</a></h3>
+                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/performance.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">Lightning Fast Performance</a></h3>
                         <p>Boost your conversion rates with landing pages that load in a flash. Our approach is designed to ensure speed and performance, every time:</p>
                         <ul class="list-unstyled mt-3">
                             <li><i class="fas fa-check text-success me-2"></i>Optimized Code Structure – Streamlined, clean code for quicker response times and seamless user experiences.</li>
@@ -420,10 +427,10 @@ box-shadow:  10px 10px 30px #764fe0,
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center"
+                    <div class="feature-box text-left"
                         style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-paint-brush feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/security.html" target="_blank" rel="noopener noreferrer">Conversion-Focused Design</a></h3>
+                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/security.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">Conversion-Focused Design</a></h3>
                         <p>Transform visitors into loyal customers with landing pages crafted for high conversions. Our designs are strategically built to engage and guide users toward action:</p>
                         <ul class="list-unstyled mt-3">
                             <li><i class="fas fa-lock text-warning me-2"></i>Clear & Compelling CTAs – Strong, visually appealing calls-to-action that encourage clicks and drive results.</li>
@@ -434,10 +441,10 @@ box-shadow:  10px 10px 30px #764fe0,
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center"
+                    <div class="feature-box text-left"
                         style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-chart-line feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/integration.html" target="_blank" rel="noopener noreferrer">Performance Tracking & Analytics</a></h3>
+                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/integration.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">Performance Tracking & Analytics</a></h3>
                         <p>Measure success and make data-driven decisions with real-time insights into your landing page performance:</p>
                         <ul class="list-unstyled mt-3">
                             <li><i class="fas fa-plug text-info me-2"></i>Comprehensive Analytics Integration – Track key metrics like traffic, conversions, bounce rates, and more with seamless integration of tools like Google Analytics.</li>
@@ -450,10 +457,10 @@ box-shadow:  10px 10px 30px #764fe0,
             </div>
             <div class="row mt-5">
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center"
+                    <div class="feature-box text-left"
                         style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-mobile-alt feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/responsive.html" target="_blank" rel="noopener noreferrer">Mobile-First Approach</a></h3>
+                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/responsive.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">Mobile-First Approach</a></h3>
                         <p>Reach your audience wherever they are with landing pages built to perform flawlessly on every device:</p>
                         <ul class="list-unstyled mt-3">
                             <li><i class="fas fa-tablet-alt text-primary me-2"></i>Mobile-Optimized Layouts – Sleek, responsive designs that ensure your landing page looks great and functions perfectly on any screen size.</li>
@@ -464,10 +471,10 @@ box-shadow:  10px 10px 30px #764fe0,
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center"
+                    <div class="feature-box text-left"
                         style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-search feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/seo.html" target="_blank" rel="noopener noreferrer">SEO Optimization</a></h3>
+                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/seo.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">SEO Optimization</a></h3>
                         <p>Increase your visibility and rank higher on search engines with our SEO-focused development techniques:</p>
                         <ul class="list-unstyled mt-3">
                             <li><i class="fas fa-chart-line text-success me-2"></i>Semantic HTML Structure – Clean, well-organized code that improves readability for both search engines and users.</li>
@@ -478,10 +485,10 @@ box-shadow:  10px 10px 30px #764fe0,
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="feature-box text-center"
+                    <div class="feature-box text-left"
                         style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <i class="fas fa-users-cog feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/cms.html" target="_blank" rel="noopener noreferrer">Custom Solutions for WordPress and Shopify</a></h3>
+                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/cms.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">Custom Solutions for WordPress and Shopify</a></h3>
                         <p>Elevate your online presence with tailored designs and functionalities specifically crafted for your WordPress or Shopify site:</p>
                         <ul class="list-unstyled mt-3">
                             <li><i class="fas fa-edit text-warning me-2"></i>Custom Themes – We create unique, visually appealing themes that reflect your brand identity while enhancing user experience.</li>
@@ -504,7 +511,7 @@ box-shadow:  10px 10px 30px #764fe0,
                         style="background: linear-gradient(145deg, #051720, #1a1a1a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <div class="card-body text-center d-flex flex-column">
                             <h3 class="card-title mb-4">Starter</h3>
-                            <h4 class="card-subtitle mb-4">$499<small class="text">/page</small></h4>
+                            
                             <ul class="list-unstyled mb-4 flex-grow-1">
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Single-page responsive design</li>
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Basic SEO optimization</li>
@@ -523,7 +530,7 @@ box-shadow:  10px 10px 30px #764fe0,
                         style="background: linear-gradient(145deg, #3a3a3a, #2a2a2a); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37); transform: scale(1.05);">
                         <div class="card-body text-center d-flex flex-column">
                             <h3 class="card-title mb-4">Professional</h3>
-                            <h4 class="card-subtitle mb-4">$999<small class="text">/page</small></h4>
+                            
                             <ul class="list-unstyled mb-4 flex-grow-1">
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Multi-section responsive design</li>
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Advanced SEO optimization</li>
@@ -545,7 +552,7 @@ box-shadow:  10px 10px 30px #764fe0,
                         style="background: linear-gradient(145deg, #132a68, #2263ad); border: none; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
                         <div class="card-body text-center d-flex flex-column">
                             <h3 class="card-title mb-4">Enterprise</h3>
-                            <h4 class="card-subtitle mb-4">Custom</h4>
+                            
                             <ul class="list-unstyled mb-4 flex-grow-1">
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Custom-designed landing pages</li>
                                 <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Comprehensive conversion strategy</li>
@@ -788,6 +795,126 @@ box-shadow:  10px 10px 30px #764fe0,
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+        const heroCanvas = document.getElementById('heroCanvas');
+        const heroScene = new THREE.Scene();
+        const heroCamera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const heroRenderer = new THREE.WebGLRenderer({ canvas: heroCanvas, alpha: true });
+        heroRenderer.setSize(window.innerWidth, window.innerHeight);
+
+        // Create particles
+        const particlesGeometry = new THREE.BufferGeometry();
+        const particlesCount = 5000;
+        const posArray = new Float32Array(particlesCount * 3);
+
+        for (let i = 0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 10;
+        }
+
+        particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+        const particlesMaterial = new THREE.PointsMaterial({
+            size: 0.005,
+            color: 0x7928CA,
+            blending: THREE.AdditiveBlending
+        });
+
+        const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
+        heroScene.add(particlesMesh);
+
+        heroCamera.position.z = 3;
+
+        // Mouse movement effect
+        let mouseX = 0;
+        let mouseY = 0;
+
+        document.addEventListener('mousemove', (event) => {
+            mouseX = event.clientX / window.innerWidth - 0.5;
+            mouseY = event.clientY / window.innerHeight - 0.5;
+        });
+
+        function animateHero() {
+            requestAnimationFrame(animateHero);
+            heroCamera.position.x += (mouseX * 0.5 - heroCamera.position.x) * 0.05;
+            heroCamera.position.y += (-mouseY * 0.5 - heroCamera.position.y) * 0.05;
+            heroCamera.lookAt(heroScene.position);
+
+            particlesMesh.rotation.y += 0.001;
+            particlesMesh.rotation.x += 0.0005;
+
+            heroRenderer.render(heroScene, heroCamera);
+        }
+        animateHero();
+
+        // Service cards Three.js scenes
+        const serviceCanvases = document.querySelectorAll('.service-canvas');
+        serviceCanvases.forEach((canvas) => {
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true });
+            renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+
+            const service = canvas.getAttribute('data-service');
+            let mesh;
+
+            switch (service) {
+                case 'performance':
+                    const torusGeometry = new THREE.TorusKnotGeometry(1, 0.3, 100, 16);
+                    const torusMaterial = new THREE.MeshNormalMaterial();
+                    mesh = new THREE.Mesh(torusGeometry, torusMaterial);
+                    break;
+                // Add cases for other services with different geometries
+            }
+
+            scene.add(mesh);
+
+            camera.position.z = 5;
+
+            function animate() {
+                requestAnimationFrame(animate);
+                mesh.rotation.x += 0.01;
+                mesh.rotation.y += 0.01;
+                renderer.render(scene, camera);
+            }
+            animate();
+
+            // Interactive hover effect
+            canvas.addEventListener('mousemove', (event) => {
+                const rect = canvas.getBoundingClientRect();
+                const x = ((event.clientX - rect.left) / canvas.clientWidth) * 2 - 1;
+                const y = -((event.clientY - rect.top) / canvas.clientHeight) * 2 + 1;
+
+                gsap.to(mesh.rotation, {
+                    x: y * Math.PI / 4,
+                    y: x * Math.PI / 4,
+                    duration: 0.5
+                });
+            });
+
+            canvas.addEventListener('mouseleave', () => {
+                gsap.to(mesh.rotation, {
+                    x: 0,
+                    y: 0,
+                    duration: 0.5
+                });
+            });
+        });
+
+        // Responsive resizing
+        window.addEventListener('resize', () => {
+            // Update hero scene
+            heroCamera.aspect = window.innerWidth / window.innerHeight;
+            heroCamera.updateProjectionMatrix();
+            heroRenderer.setSize(window.innerWidth, window.innerHeight);
+
+            // Update service card scenes
+            serviceCanvases.forEach((canvas) => {
+                const camera = canvas.camera;
+                const renderer = canvas.renderer;
+                camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+            });
+        });
         $(document).ready(function () {
             // Smooth scrolling for navbar links
             $('a.nav-link').on('click', function (event) {
