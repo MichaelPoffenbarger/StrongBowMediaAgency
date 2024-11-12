@@ -3,9 +3,8 @@
 
 <head>
     <meta name="description" content="Strongbow Media - Your one-stop solution for all your digital needs.">
-    <meta name="keywords"
-        content="Strongbow Media, Web Design, Web Development, E-commerce Solutions, Mobile App Development, SEO Optimization">
-    <meta name="author" content="Your Name">
+    <meta name="keywords" content="Strongbow Media, Web Design, Web Development, E-commerce Solutions, Mobile App Development, SEO Optimization, Fort Worth Web Design, Texas Web Development, Local SEO Services, Digital Marketing Fort Worth, Web Solutions Texas">
+    <meta name="author" content="BeaM-O">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000">
@@ -64,6 +63,13 @@
                 width: 300px;
                 margin-top:150px;
             }
+            .bento-grid {
+            grid-template-columns: 1fr;
+        }
+        .bento-item, .bento-item-large, .bento-item-wide, .bento-item-tall {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
         }
 
         @media (min-width: 1200px) {
@@ -71,6 +77,12 @@
                 width: 800px;
                 height: 500px;
             }
+            .bento-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        .bento-item-large, .bento-item-wide {
+            grid-column: span 2;
+        }
         }
 
 
@@ -250,8 +262,8 @@
 
         .btn-primary {
             border-radius: 50px;
-background: #764fe0;
-box-shadow:  10px 10px 30px #764fe0,
+            background: #764fe0;
+            box-shadow:  10px 10px 30px #764fe0,
              -10px -10px 30px #410ca5;
             padding: 0.75rem 1.5rem;
             font-size: 1.1rem;
@@ -357,6 +369,69 @@ box-shadow:  10px 10px 30px #764fe0,
         .hover-effect:hover {
             color: #7928CA !important;
         }
+        .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .bento-item {
+        background: #08202c;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bento-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
+    }
+
+    .bento-item-large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .bento-item-wide {
+        grid-column: span 2;
+    }
+
+    .bento-item-tall {
+        grid-row: span 2;
+    }
+
+    .bento-item h3 {
+        color: #764fe0;
+        font-family: 'bebas neue', sans-serif;
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .bento-item h3 a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .bento-item h3 a:hover {
+        text-decoration: underline;
+    }
+
+    .feature-icon {
+        font-size: 2.5rem;
+        color: #764fe0;
+    }
+
+    .bento-item .btn-outline-light {
+        margin-top: auto;
+        align-self: flex-start;
+    }
+
+    .bento-item p, .bento-item ul {
+        margin-bottom: 1rem;
+    }
     </style>
 </head>
 
@@ -407,100 +482,71 @@ box-shadow:  10px 10px 30px #764fe0,
             </div>
         </div>
     </section>
-
     <section id="features" class="py-5">
-        <div class="container">
+        <div class="container-fluid px-4">
             <h2 class="text-center section-title mb-5" style="font-family: 'bebas neue';">Services We Offer</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box text-left"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
-                        <i class="fas fa-rocket feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/performance.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">Lightning Fast Performance</a></h3>
-                        <p>Boost your conversion rates with landing pages that load in a flash. Our approach is designed to ensure speed and performance, every time:</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-check text-success me-2"></i>Optimized Code Structure – Streamlined, clean code for quicker response times and seamless user experiences.</li>
-                            <li><i class="fas fa-check text-success me-2"></i>CDN Integration for Global Reach – Fast delivery of your landing pages to users anywhere in the world, reducing latency.</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Efficient Caching Strategies – Smart caching ensures repeat visitors experience instant load times.</li>
-                            <li><i class="fas fa-check text-success me-2"></i>Image & Asset Optimization – Minimized file sizes without sacrificing quality, for faster page loads and sharper visuals.</li>
-                        </ul>
-                    </div>
+            <div class="bento-grid">
+                <div class="bento-item bento-item-large">
+                    <i class="fas fa-rocket feature-icon mb-4"></i>
+                    <h3><a href="https://strongbow.media/servicelist/performance.html" target="_blank" rel="noopener noreferrer">Lightning Fast Performance</a></h3>
+                    <p>Boost your conversion rates with landing pages that load in a flash. Our approach is designed to ensure speed and performance, every time:</p>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="fas fa-check text-success me-2"></i>Optimized Code Structure – Streamlined, clean code for quicker response times and seamless user experiences.</li>
+                        <li><i class="fas fa-check text-success me-2"></i>CDN Integration for Global Reach – Fast delivery of your landing pages to users anywhere in the world, reducing latency.</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Efficient Caching Strategies – Smart caching ensures repeat visitors experience instant load times.</li>
+                        <li><i class="fas fa-check text-success me-2"></i>Image & Asset Optimization – Minimized file sizes without sacrificing quality, for faster page loads and sharper visuals.</li>
+                    </ul>
+                    <p class="mt-3">Our performance optimization techniques ensure that your landing pages not only look great but also provide a smooth, fast experience that keeps visitors engaged and improves your chances of conversion.</p>
+                    <a href="https://strongbow.media/servicelist/performance.html" class="btn btn-outline-light mt-3">Learn More</a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box text-left"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
-                        <i class="fas fa-paint-brush feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/security.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">Conversion-Focused Design</a></h3>
-                        <p>Transform visitors into loyal customers with landing pages crafted for high conversions. Our designs are strategically built to engage and guide users toward action:</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-lock text-warning me-2"></i>Clear & Compelling CTAs – Strong, visually appealing calls-to-action that encourage clicks and drive results.</li>
-                            <li><i class="fas fa-lock text-warning me-2"></i>Persuasive Copywriting – Words that resonate, connect, and motivate your audience to take the next step.</li>
-                            <li><i class="fas fa-lock text-warning me-2"></i>Trust-Building Elements – Features like testimonials, security badges, and guarantees that establish credibility and confidence.</li>
-                            <li><i class="fas fa-lock text-warning me-2"></i>Optimized User Flow – Seamless navigation and intuitive layouts that keep users focused on what matters most—converting.</li>
-                        </ul>
-                    </div>
+                <div class="bento-item">
+                    <i class="fas fa-paint-brush feature-icon mb-4"></i>
+                    <h3><a href="https://strongbow.media/servicelist/security.html" target="_blank" rel="noopener noreferrer">Conversion-Focused Design</a></h3>
+                    <p>Transform visitors into loyal customers with landing pages crafted for high conversions. Our designs are strategically built to engage and guide users toward action.</p>
+                    <a href="https://strongbow.media/servicelist/security.html" class="btn btn-outline-light mt-3">Learn More</a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box text-left"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
-                        <i class="fas fa-chart-line feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/integration.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">Performance Tracking & Analytics</a></h3>
-                        <p>Measure success and make data-driven decisions with real-time insights into your landing page performance:</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-plug text-info me-2"></i>Comprehensive Analytics Integration – Track key metrics like traffic, conversions, bounce rates, and more with seamless integration of tools like Google Analytics.</li>
-                            <li><i class="fas fa-plug text-info me-2"></i>Conversion Rate Monitoring – Get detailed reports on how visitors interact with your landing page and identify opportunities to boost conversions.</li>
-                            <li><i class="fas fa-plug text-info me-2"></i>A/B Testing Capabilities – Test different elements of your landing page to find what resonates best with your audience and optimize for better results.</li>
-                            <li><i class="fas fa-plug text-info me-2"></i>User Behavior Insights – Understand user engagement with heatmaps, click tracking, and session recordings to refine and improve your landing page strategy.</li>
-                        </ul>
-                    </div>
+                <div class="bento-item">
+                    <i class="fas fa-chart-line feature-icon mb-4"></i>
+                    <h3><a href="https://strongbow.media/servicelist/integration.html" target="_blank" rel="noopener noreferrer">Performance Tracking & Analytics</a></h3>
+                    <p>Measure success and make data-driven decisions with real-time insights into your landing page performance. Optimize your strategies based on concrete data.</p>
+                    <a href="https://strongbow.media/servicelist/integration.html" class="btn btn-outline-light mt-3">Learn More</a>
                 </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box text-left"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
-                        <i class="fas fa-mobile-alt feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/responsive.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">Mobile-First Approach</a></h3>
-                        <p>Reach your audience wherever they are with landing pages built to perform flawlessly on every device:</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-tablet-alt text-primary me-2"></i>Mobile-Optimized Layouts – Sleek, responsive designs that ensure your landing page looks great and functions perfectly on any screen size.</li>
-                            <li><i class="fas fa-tablet-alt text-primary me-2"></i>Touch-Friendly Interfaces – Intuitive navigation and easy-to-use buttons that enhance the user experience on smartphones and tablets.</li>
-                            <li><i class="fas fa-tablet-alt text-primary me-2"></i>Adaptive Images & Content – Dynamically resized visuals and content that load quickly and adjust seamlessly to each device.</li>
-                            <li><i class="fas fa-tablet-alt text-primary me-2"></i>Cross-Device Consistency – A cohesive experience, whether your visitors are on desktop, mobile, or tablet, ensuring they get the same high-quality interaction every time.</li>
-                        </ul>
-                    </div>
+                <div class="bento-item bento-item-wide">
+                    <i class="fas fa-mobile-alt feature-icon mb-4"></i>
+                    <h3><a href="https://strongbow.media/servicelist/responsive.html" target="_blank" rel="noopener noreferrer">Mobile-First Approach</a></h3>
+                    <p>Reach your audience wherever they are with landing pages built to perform flawlessly on every device:</p>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="fas fa-tablet-alt text-primary me-2"></i>Mobile-Optimized Layouts – Sleek, responsive designs that ensure your landing page looks great and functions perfectly on any screen size.</li>
+                        <li><i class="fas fa-tablet-alt text-primary me-2"></i>Touch-Friendly Interfaces – Intuitive navigation and easy-to-use buttons that enhance the user experience on smartphones and tablets.</li>
+                        <li><i class="fas fa-tablet-alt text-primary me-2"></i>Adaptive Images & Content – Dynamically resized visuals and content that load quickly and adjust seamlessly to each device.</li>
+                        <li><i class="fas fa-tablet-alt text-primary me-2"></i>Cross-Device Consistency – A cohesive experience, whether your visitors are on desktop, mobile, or tablet, ensuring they get the same high-quality interaction every time.</li>
+                    </ul>
+                    <p class="mt-3">With our mobile-first approach, you'll capture and retain the attention of users across all devices, maximizing your reach and conversion potential.</p>
+                    <a href="https://strongbow.media/servicelist/responsive.html" class="btn btn-outline-light mt-3">Learn More</a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box text-left"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
-                        <i class="fas fa-search feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/seo.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">SEO Optimization</a></h3>
-                        <p>Increase your visibility and rank higher on search engines with our SEO-focused development techniques:</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-chart-line text-success me-2"></i>Semantic HTML Structure – Clean, well-organized code that improves readability for both search engines and users.</li>
-                            <li><i class="fas fa-chart-line text-success me-2"></i>Optimized Meta Tags – Tailored titles, descriptions, and keywords that help your page stand out in search results.</li>
-                            <li><i class="fas fa-chart-line text-success me-2"></i>Schema Markup Integration – Structured data that enhances how your content is understood and displayed by search engines.</li>
-                            <li><i class="fas fa-chart-line text-success me-2"></i>Performance Optimization for Better Rankings – Fast-loading pages, mobile responsiveness, and efficient code that contribute to better search rankings.</li>
-                        </ul>
-                    </div>
+                <div class="bento-item">
+                    <i class="fas fa-search feature-icon mb-4"></i>
+                    <h3><a href="https://strongbow.media/servicelist/seo.html" target="_blank" rel="noopener noreferrer">SEO Optimization</a></h3>
+                    <p>Increase your visibility and rank higher on search engines with our SEO-focused development techniques. Drive organic traffic and improve your online presence.</p>
+                    <a href="https://strongbow.media/servicelist/seo.html" class="btn btn-outline-light mt-3">Learn More</a>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="feature-box text-left"
-                        style="padding: 3rem 1.5rem; border-radius: 10px; background: #08202c; box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);">
-                        <i class="fas fa-users-cog feature-icon mb-4" style="font-size: 3.5rem;"></i>
-                        <h3 class="mb-3"><a href="https://strongbow.media/servicelist/cms.html" target="_blank" rel="noopener noreferrer" style="color: #764fe0; font-family: 'bebas neue'; font-size: 2rem;">Custom Solutions for WordPress and Shopify</a></h3>
-                        <p>Elevate your online presence with tailored designs and functionalities specifically crafted for your WordPress or Shopify site:</p>
-                        <ul class="list-unstyled mt-3">
-                            <li><i class="fas fa-edit text-warning me-2"></i>Custom Themes – We create unique, visually appealing themes that reflect your brand identity while enhancing user experience.</li>
-                            <li><i class="fas fa-edit text-warning me-2"></i>Personalized Buttons and Call-to-Action Elements – Design eye-catching buttons that guide users and encourage conversions, tailored to fit your site's aesthetic.</li>
-                            <li><i class="fas fa-edit text-warning me-2"></i>Tailored Store Layouts – Optimize your online store with custom layouts that make navigation intuitive and showcase your products effectively.</li>
-                            <li><i class="fas fa-edit text-warning me-2"></i>Seamless Integrations – Enhance functionality with custom features and plugins that cater to your specific business needs, ensuring a smooth shopping experience for your customers.</li>
-                        </ul>
-                    </div>
+                <div class="bento-item bento-item-tall">
+                    <i class="fas fa-users-cog feature-icon mb-4"></i>
+                    <h3><a href="https://strongbow.media/servicelist/cms.html" target="_blank" rel="noopener noreferrer">Custom Solutions for WordPress and Shopify</a></h3>
+                    <p>Elevate your online presence with tailored designs and functionalities specifically crafted for your WordPress or Shopify site:</p>
+                    <ul class="list-unstyled mt-3">
+                        <li><i class="fas fa-edit text-warning me-2"></i>Custom Themes – We create unique, visually appealing themes that reflect your brand identity while enhancing user experience.</li>
+                        <li><i class="fas fa-edit text-warning me-2"></i>Personalized Buttons and Call-to-Action Elements – Design eye-catching buttons that guide users and encourage conversions, tailored to fit your site's aesthetic.</li>
+                        <li><i class="fas fa-edit text-warning me-2"></i>Tailored Store Layouts – Optimize your online store with custom layouts that make navigation intuitive and showcase your products effectively.</li>
+                        <li><i class="fas fa-edit text-warning me-2"></i>Seamless Integrations – Enhance functionality with custom features and plugins that cater to your specific business needs, ensuring a smooth shopping experience for your customers.</li>
+                    </ul>
+                    <p class="mt-3">Our custom solutions are designed to make your WordPress or Shopify site stand out from the competition, providing a unique and engaging experience for your visitors.</p>
+                    <a href="https://strongbow.media/servicelist/cms.html" class="btn btn-outline-light mt-3">Learn More</a>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section id="pricing" class="py-5">
         <div class="container">
