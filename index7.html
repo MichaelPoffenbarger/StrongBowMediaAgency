@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bento Grid Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 15px;
+    max-width: 351px;
+    margin: 0 auto;
+}
+
+.bento-item {
+    border-radius: 15px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.bento-item:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    background-color: #808080;
+    grid-column: span 1;
+}
+
+.garage-services {
+    background-image: url('https://v0.dev/placeholder.svg?height=200&width=400');
+    grid-column: span 2;
+}
+
+.orange-door {
+    background-image: url('https://v0.dev/placeholder.svg?height=200&width=200');
+    background-color: #FFA500;
+    grid-column: span 1;
+}
+
+.halloween-door {
+    background-image: url('https://v0.dev/placeholder.svg?height=200&width=200');
+    background-color: #FF4500;
+    grid-column: span 1;
+}
+
+.triangle-logo, .triangle-logo-alt {
+    background-color: #FFFFFF;
+    grid-column: span 1;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #000000;
+}
+
+.triangle-alt {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid #0000FF;
+}
+
+.bebas-neue {
+    background-color: #808080;
+    grid-column: span 1;
+}
+
+.dark {
+    background-color: #1a1a1a;
+    grid-column: span 1;
+}
+
+.circle-logo {
+    background-color: #FFFFFF;
+    grid-column: span 1;
+}
+
+.circle {
+    width: 50px;
+    height: 50px;
+    background-color: #FFD700;
+    border-radius: 50%;
+}
+
+.landscaping {
+    background-color: #0000FF;
+    grid-column: span 2;
+}
+
+.group-photo {
+    background-image: url('https://v0.dev/placeholder.svg?height=200&width=200');
+    grid-column: span 1;
+}
+
+@media (max-width: 768px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .garage-services, .landscaping {
+        grid-column: span 2;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-4">
+        <div class="row g-4" id="bento-grid">
+            <div class="col-md-4 col-lg-3">
+                <div class="bento-item" style="background-color: #808080;">
+                    <h3>Brand Logo</h3>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-6">
+                <div class="bento-item" style="background-image: url('https://v0.dev/placeholder.svg?height=200&width=400');">
+                    <h3>Garage Door Services</h3>
+                    <button class="btn btn-warning">Learn More</button>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="bento-item" style="background-image: url('https://v0.dev/placeholder.svg?height=200&width=200');">
+                    <h3>Orange Door</h3>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="bento-item dark">
+                    <h3>Halloween Theme</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="bento-item">
+                    <div class="triangle"></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="bento-item" style="background-color: #800080;">
+                    <h3>BEBAS NEUE</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="bento-item dark"></div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="bento-item dark"></div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="bento-item">
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-6">
+                <div class="bento-item" style="background-color: #0000FF;">
+                    <h3>Landscaping Services</h3>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="bento-item">
+                    <div class="red-shape"></div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="bento-item" style="background-image: url('https://v0.dev/placeholder.svg?height=200&width=200');">
+                    <h3>Group Photo</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="bento-item">
+                    <div class="triangle-alt"></div>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="bento-item" style="background-color: #800080;">
+                    <h3>BEBAS NEUE</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="bento-item dark"></div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="bento-item dark"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
