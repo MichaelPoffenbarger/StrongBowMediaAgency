@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn More</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #1B1F3B;
+            color: #4A4A4A;
+        }
+        #shader-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        h1 {
+            font-family: 'Silkscreen', sans-serif;
+            color: #ffffff;
+            font-size: 4rem;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #0bc4fc, #734cff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            font-size: 4.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="shader-background"></div>
+    <header>
+        <div class="container">
+            <h1><span class="text-gradient">Learn More</span></h1>
+            <p class="text-white text-center" style="font-size: 1.5rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <h2>Web Design</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container"> 
+            <h2>Web Development</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Search Engine Optimization</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for navigation links
+            $('a.nav-link').on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+
+            // Add animation to cards on hover
+            $('.card').hover(
+                function() {
+                    $(this).addClass('shadow-lg').css('cursor', 'pointer'); 
+                }, function() {
+                    $(this).removeClass('shadow-lg');
+                }
+            );
+        });
+
+        $(document).ready(function() {
+            let scene, camera, renderer;
+            let uniforms = {
+                u_resolution: { value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
+                u_time: { value: 0.0 },
+                u_color: { value: new THREE.Vector3(0.3137254901960784, 0, 1) },
+                u_background: { value: new THREE.Vector4(0, 0, 0, 1) },
+                u_speed: { value: 0.1 },
+                u_detail: { value: 0.4 }
+            };
+
+            const vertexShader = `
+                void main() {
+                    gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+                }
+            `;
+
+            const fragmentShader = `
+                uniform vec2 u_resolution;
+                uniform float u_time;
+                uniform vec3 u_color;
+                uniform vec4 u_background;
+                uniform float u_speed;
+                uniform float u_detail;
+
+                mat2 m(float a) {
+                    float c=cos(a), s=sin(a);
+                    return mat2(c,-s,s,c);
+                }
+
+                float rgb2luma(in vec3 color) {
+                    return dot(color, vec3(0.299, 0.587, 0.114));
+                }
+
+                float luma(in vec3 v) { return rgb2luma(v); }
+
+                float map(vec3 p) {
+                    float t = u_time * u_speed;
+                    p.xz *= m(t * 0.4);p.xy*= m(t * 0.1);
+                    vec3 q = p * 2.0 + t;
+                    return length(p+vec3(sin((t*u_speed) * 0.1))) * log(length(p) + 0.9) + cos(q.x + sin(q.z + cos(q.y))) * 0.5 - 1.0;
+                }
+
+                void main() {
+                    vec2 a = gl_FragCoord.xy / u_resolution.x - vec2(0.5, 0.5);
+                    vec3 cl = vec3(0.0);
+                    float d = 2.5;
+
+                    for (float i = 0.; i <= (1. + 20. * u_detail); i++) {
+                        vec3 p = vec3(0, 0, 4.0) + normalize(vec3(a, -1.0)) * d;
+                        float rz = map(p);
+                        float f =  clamp((rz - map(p + 0.1)) * 0.5, -0.1, 1.0);
+                        vec3 l = vec3(0.1, 0.3, 0.4) + vec3(5.0, 2.5, 3.0) * f;
+                        cl = cl * l + smoothstep(2.5, 0.0, rz) * 0.6 * l;
+                        d += min(rz, 1.0);
+                    }
+                    
+                    vec4 color = vec4(min(u_color, cl),1.0);
+                    color.r = max(u_background.r,color.r);
+                    color.g = max(u_background.g,color.g);
+                    color.b = max(u_background.b,color.b);
+
+                    gl_FragColor = color;
+                }
+            `;
+
+            function init() {
+                scene = new THREE.Scene();
+                camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+
+                renderer = new THREE.WebGLRenderer();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                $('#shader-background').append(renderer.domElement);
+
+                const geometry = new THREE.PlaneGeometry(2, 2);
+                const material = new THREE.ShaderMaterial({
+                    uniforms: uniforms,
+                    vertexShader: vertexShader,
+                    fragmentShader: fragmentShader
+                });
+
+                const mesh = new THREE.Mesh(geometry, material);
+                scene.add(mesh);
+
+                animate();
+            }
+
+            function animate() {
+                requestAnimationFrame(animate);
+                uniforms.u_time.value += 0.05;
+                renderer.render(scene, camera);
+            }
+
+            function onWindowResize() {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                uniforms.u_resolution.value.set(window.innerWidth, window.innerHeight);
+            }
+
+            $(window).on('resize', onWindowResize);
+
+            init();
+
+            // Smooth scrolling for navigation links
+            $('a.nav-link').on('click', function(event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+                    var hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function(){
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
