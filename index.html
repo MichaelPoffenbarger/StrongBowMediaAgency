@@ -126,6 +126,105 @@
         p {
             font-family: 'Lato', sans-serif;
         }
+        .crystal-container {
+            position: relative;
+            width: 144px;
+            height: 546px;
+            transform: scale(1.5);
+        }
+
+        .crystal-section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .section-1 {
+            clip-path: path('M40 113L29 515H87.5L40 113Z');
+            background: linear-gradient(to right, #6DFFD6, #207ECB);
+        }
+
+        .section-2 {
+            clip-path: path('M136.5 489L111.5 106.5L101 109.5L90 515L136.5 489Z');
+            background: linear-gradient(to right, #3AE3BF, #7BC3FE);
+        }
+
+        .section-3 {
+            clip-path: path('M62.5 55.5L39 102.5L28 515.5L8 532.5L22 102.5L62.5 17.5V55.5Z');
+            background: linear-gradient(to bottom, #B3E6D1, #70FF16);
+        }
+
+        .section-4 {
+            clip-path: path('M88 515.5L136.5 489V500.5L96.5 533.5L88 515.5Z');
+            background: linear-gradient(to bottom, #69DEEB, #30C288);
+        }
+
+        .section-5 {
+            clip-path: path('M63 55L100.5 109L88 515.5L39.5 101.5L63 55Z');
+            background: linear-gradient(to bottom, #5CEBDA, #14E923);
+        }
+
+        .section-6 {
+            clip-path: path('M63 55L100.5 109L111 106L63 16V55Z');
+            background: linear-gradient(to bottom, #7FB6E9, #0572BF);
+        }
+
+        .outline {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 50%;
+            pointer-events: none;
+            filter: drop-shadow(0 0 10px rgba(14, 240, 221, 0.1));
+        }
+
+        .outline path {
+            fill: none;
+            stroke: rgba(14, 240, 221, 0.03);
+            stroke-width: 12;
+        }
+
+        /* Shimmer effect */
+        .crystal-section::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(
+                45deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.2) 50%,
+                transparent 100%
+            );
+            background-size: 200% 200%;
+            animation: shimmer 3s infinite linear;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .crystal-container:hover .crystal-section::after {
+            opacity: 1;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* Hover effects */
+        .crystal-container:hover .crystal-section {
+            filter: brightness(1.2);
+        }
+
+        .crystal-container:hover {
+            transform: scale(1.6);
+        }
     </style>
 </head>
 <body>
@@ -248,7 +347,7 @@
 
     <section id="team" class="team">
         <div class="container">
-            <h2 class="text-center mb-5">Meet Our Team</h2>
+            <h2 class="text-center mb-5">Meet The Team</h2>
             
             <div class="row">
                 <div class="col-md-3 mb-4">
@@ -263,7 +362,9 @@
                     </div>
                 </div>
             </div>
+            
         </div>
+
     </section>
 
     <section id="testimonials" class="testimonials">
@@ -335,11 +436,49 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Us</h2>
+            <p class="text-center mb-5">We'd love to hear from you! Whether you have a question, a project in mind, or just want to say hi, we're here to help.</p>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="crystal-container col-md-6 col-lg-4" style="transform: scale(0.8); margin-left: 100px;">
+                    <div class="crystal-section section-1"></div>
+                    <div class="crystal-section section-2"></div>
+                    <div class="crystal-section section-3"></div>
+                    <div class="crystal-section section-4"></div>
+                    <div class="crystal-section section-5"></div>
+                    <div class="crystal-section section-6"></div>
+                    <svg class="outline" viewBox="0 0 144 546" xmlns="http://www.w3.org/2000/svg" style="transform: scale(0.8);">
+                        <path d="M136.5 489L111.5 106.5L101 109.5L90 515L136.5 489ZM136.5 489L88 515.5M136.5 489V500.5L96.5 533.5L88 515.5M111 106L64 14.5L22.5 106L6.5 534.5H95.5L137.5 500.5L111 106ZM111 106L100.5 109M111 106L63 16V55M88 515.5L100.5 109M88 515.5L39.5 101.5L63 55M63 55L100.5 109M40 113L29 515H87.5L40 113ZM62.5 55.5L39 102.5L28 515.5L8 532.5L22 102.5L62.5 17.5V55.5Z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="cta" class="cta">
         <div class="container text-center">
             <h2 class="mb-4 text-white">Start Your Journey Today</h2>
             <p class="mb-4 text-white lead">Transform your digital presence with our expert web design solutions tailored just for you.</p>
-            <a href="#" class="btn btn-primary btn-lg me-3"><span class="iconify" data-icon="mdi:arrow-right"></span> Get Started</a>
+            <a href="#" class="btn btn-primary btn-lg"><span class="iconify" data-icon="mdi:arrow-right"></span> Get Started</a>
             <a href="#" class="btn btn-outline-primary btn-lg"><span class="iconify" data-icon="mdi:handshake"></span> Learn More</a>
         </div>
     </section>
