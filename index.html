@@ -225,6 +225,12 @@
         .crystal-container:hover {
             transform: scale(1.6);
         }
+
+        .shadow-sm {
+            background-color: #00000000;
+            box-shadow: 0 10px -10px rgb(243, 243, 243);
+        }
+     
     </style>
 </head>
 <body>
@@ -241,19 +247,19 @@
                         <a class="nav-link text-white lead" href="#home"><span class="iconify" data-icon="mdi:home"></span> Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white lead" href="#about">About Us</a>
+                        <a class="nav-link text-white lead" href="#about">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white lead" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white lead" href="#contact">Contact Us</a>
+                        <a class="nav-link text-white lead" href="#contact">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white lead" href="#join">Join</a>
                     </li>
                     <li class="nav-item">
-                        <a class="btn btn-primary text-white lead" href="#start">Start</a>
+                        <a class="btn btn-primary text-white lead" style="padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;" href="#start">Start</a>
                     </li>
                 </ul>
             </div>
@@ -265,7 +271,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6">
                     <h1 class="display-4 mb-4">Transform Your Vision into Reality Today</h1>
-                    <p class="lead mb-4">At STRONGBOW Media, we specialize in creating stunning websites that not only look great but also drive results. Let us help you elevate your online presence with our tailored web design solutions.</p>
+                    <p class="lead mb-4 col-lg-8 col-md-8 col-sm-12 col-xs-12">At STRONGBOW Media, we specialize in creating stunning websites that not only look great but also drive results. Let us help you elevate your online presence with our tailored web design solutions.</p>
                     <a href="#contact" class="btn btn-primary btn-lg me-3">Get Started</a>
                     <a href="#" class="btn btn-outline-primary btn-lg">Learn More</a>
                 </div>
@@ -286,21 +292,21 @@
     </section>
 
     <section id="services" class="services">
-        <div class="container" style="background-image: url(img/strongbowPlay3.svg); background-size: cover; background-position: center; font-weight: 700; border-radius: 20px; border: 1px solid silver; box-shadow: (0 10px 10px rgb(243, 243, 243));">
+        <div class="container" style="background-image: url(img/strongbowPlay3.svg); background-size: cover; background-position: right; font-weight: 700; border-radius: 20px; border: 1px solid silver; box-shadow: 0 10px 10px rgb(243, 243, 243);">
             
                 
             <h1 class="text-left mb-5 mt-5" style="font-family: 'Silkscreen', sans-serif;">SERVICES</h1>
-            <p class="text-left mb-5 text-white lead">We specialize in creating tailored web experiences that resonate with your audience. Our solutions are designed to elevate your brand and drive results.</p>
+            <p class="text-left mb-5 text-white lead col-lg-6 col-md-6 col-sm-12 col-xs-12">We specialize in creating tailored web experiences that resonate with your audience. Our solutions are designed to elevate your brand and drive results.</p>
             <div class="row">
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
                             <h3 class="card-title text-white" style="font-family: 'Silkscreen', sans-serif; font-size: 2rem;"><span class="iconify" data-icon="mdi:web"></span> Custom Web Design</h3>
-                            <p class="card-text text-white lead" >Transform your vision into a stunning website.</p>
+                            <p class="card-text text-white lead">Transform your vision into a stunning website.</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
                             <h3 class="card-title text-white" style="font-family: 'Silkscreen', sans-serif; font-size: 2rem;">E-commerce Solutions</h3>
@@ -308,7 +314,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 mb-4">
+                <div class="col-md-4 col-sm-6 col-xs-12 mb-4">
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
                             <h3 class="card-title text-white" style="font-family: 'Silkscreen', sans-serif; font-size: 2rem;">SEO Optimization</h3>
@@ -318,7 +324,7 @@
                 </div>
             </div>
             <div class="text-center mt-5 mb-5">
-                <a href="#" class="btn btn-primary btn-lg me-3">Learn More</a>
+                <a href="https://strongbowmedia.com/learnmore.html" class="btn btn-primary btn-lg me-3">Learn More</a>
                 <a href="#" class="btn btn-outline-primary btn-lg">Get Started</a>
             </div>
         </div>
@@ -328,7 +334,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <img src="img/stronbowBbadge.jpg" alt="Elevate Your Brand" class="img-fluid rounded" style="border-radius: 20px;">
+                    <img src="img/stronbowBbadge.jpg" alt="Elevate Your Brand" class="img-fluid rounded mb-5" style="border-radius: 20px;">
                 </div>
                 <div class="col-lg-6">
                     <h2 class="mb-4">Making a great impression starts online</h2>
@@ -349,15 +355,14 @@
         <div class="container">
             <h2 class="text-center mb-5">Meet The Team</h2>
             
-            <div class="row">
-                <div class="col-md-3 mb-4">
-                    <div class="card h-100 shadow-sm">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-6 col-sm-12 col-xs-12 mb-4">
+                    <div class="card h-100 shadow-sm" id="michael">
                         <img src="img/model.png" class="card-img-top" alt="Alice Johnson">
                         <div class="card-body">
                             <h5 class="card-title text-white">Michael Poffenbarger</h5>
                             <p class="card-text text-white lead">Owner/Operator</p>
                             <p class="card-text text-white lead">I love to build things.</p>
-                            
                         </div>
                     </div>
                 </div>
@@ -436,10 +441,40 @@
         </div>
     </section>
 
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="text-center mb-5">Frequently Asked Questions</h2>
+            <p class="text-center mb-5 text-white lead">We've got answers to all your questions!</p>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h3 class="mb-3">How much does it cost to build a website?</h3>
+                    <p class="text-white lead">The cost of building a website can vary widely depending on the complexity of the project. We offer flexible pricing options to suit your needs.</p>
+                    
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3 class="mb-3">How long does it take to build a website?</h3>
+                    <p class="text-white lead">The timeline for website development depends on the project's scope. We work closely with you to ensure timely delivery.</p>
+                    
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3 class="mb-3">What is your refund policy?</h3>
+                    <p class="text-white lead">We offer a 30-day refund policy for any issues with the website. Please contact us within 30 days of the project's completion.</p>
+                    
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h3 class="mb-3">How do I get started?</h3>
+                    <p class="text-white lead">Simply contact us through our website or email. We'll discuss your project details and provide a tailored quote.</p>
+                    
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <section>
         <div class="container">
             <h2 class="text-center mb-5">Contact Us</h2>
-            <p class="text-center mb-5">We'd love to hear from you! Whether you have a question, a project in mind, or just want to say hi, we're here to help.</p>
+            <p class="text-center mb-5 text-white lead">We'd love to hear from you! Whether you have a question, a project in mind, or just want to say hi, we're here to help.</p>
             <div class="row">
                 <div class="col-md-6 col-lg-4 mb-4">
                     <form>
@@ -450,13 +485,13 @@
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" class="form-control" id="email" placeholder="Enter your email">
-                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                            <small class="form-text text-white">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" style="padding-bottom: 12px;"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" style="margin-top: 24px; width: 100%;">Submit</button>
                     </form>
                 </div>
                 <div class="crystal-container col-md-6 col-lg-4" style="transform: scale(0.8); margin-left: 100px;">
